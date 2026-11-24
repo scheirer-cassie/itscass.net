@@ -1,10 +1,10 @@
 ---
 title: Cameras
-categories: [collections]
-start: 2020
-end: present
-keywords: [camera building, slit-scan, physical computing]
-summary: A collection of cameras and capture machines I've built or modified.
+categories:
+  - collections
+start: 2018
+years: ongoing
+summary: My collection of vintage cameras and other lens-based equipment.
 tint: "#e96aa0"
 ---
 A running collection of the cameras and capture machines I've built or modified, and what I made with them.
