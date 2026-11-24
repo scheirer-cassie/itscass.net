@@ -3,6 +3,6 @@ title: WeGrow
 categories:
   - design
 start: 2021
-summary: A mobile-forward social platform for connecting budding creators in
+summary: A social app for connecting budding creators and entrepreneurs in
   service of collaborations.
 ---
