@@ -1,0 +1,8 @@
+---
+title: Band Names
+categories:
+  - collections
+start: 2018
+years: ongoing
+summary: A list of band names.
+---
