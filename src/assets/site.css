@@ -20,7 +20,7 @@
 
   /* type sizes */
   --fs-name: 34px;
-  --fs-path: 22px;
+  --fs-path: 32px; /* file path and the landing heading share this size */
   --fs-h: 20px;
   --fs-body: 18px;
   --fs-nav: 17px;
@@ -107,7 +107,7 @@ html:not(.js) .tog .mk::before { content: "[−]"; }
 
 /* ---------- path bar ---------- */
 .pathbar { border-bottom: var(--rule); padding-bottom: 10px; }
-.path { margin: 0; font-size: var(--fs-path); font-weight: 700; word-break: break-all; }
+.path { margin: 0; font-size: var(--fs-path); line-height: 1.2; font-weight: 700; overflow-wrap: anywhere; }
 .path a { color: var(--ink); text-decoration: none; }
 .path a:hover { color: var(--link-hover); text-decoration: underline; }
 #path-kw { color: var(--ink-quiet); }
@@ -116,7 +116,7 @@ html:not(.js) .tog .mk::before { content: "[−]"; }
 /* bio, then recent updates below it */
 .bio { padding-top: 8px; }
 .home .feed { margin-top: 36px; }
-.hello { margin: 0 0 24px; font-size: 32px; font-weight: 700; border-bottom: var(--rule); padding-bottom: 4px; }
+.hello { margin: 0 0 24px; font-size: var(--fs-path); font-weight: 700; border-bottom: var(--rule); padding-bottom: 4px; }
 .prose p { margin: 0 0 1em; line-height: 1.6; }
 .prose p:last-child { margin-bottom: 0; }
 .prose h2, .prose h3 { font-size: var(--fs-body); color: var(--ink-quiet); margin: 1.4em 0 .6em; }
@@ -229,5 +229,6 @@ h1, h2, h3, .name, .path, .hello, .dtitle, .sect, .ptitle, .feedh h2 { font-fami
   .pimg { aspect-ratio: 16 / 9; }
   .doc { padding: 18px 16px; }
   .dtitle { font-size: 28px; }
+  :root { --fs-path: 26px; }
   .doc .rdl { grid-template-columns: 80px minmax(0, 1fr); }
 }
