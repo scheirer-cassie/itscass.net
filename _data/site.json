@@ -1,0 +1,26 @@
+{
+  "name": "Cass Scheirer",
+  "tagline": [
+    "Artist, designer, educator, & PhD student at NYU."
+  ],
+  "pronouns": "she/they",
+  "location": "nyc",
+  "email_display": "cls663 @ nyu dot edu",
+  "cv": "/cv.pdf",
+  "portrait": "/src/images/portrait.jpg",
+  "portrait_alt": "Portrait of Cass Scheirer",
+  "description": "Cass Scheirer — PhD candidate at NYU Steinhardt, artist and educator. Research, teaching, artwork, photography, design and collections.",
+  "url": "https://itscass.net",
+  "categories": [
+    "research",
+    "design",
+    "artwork",
+    "photography",
+    "collections",
+    "teaching"
+  ],
+  "nav_years": [
+    "design",
+    "artwork"
+  ]
+}

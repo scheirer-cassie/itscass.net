@@ -1,0 +1,242 @@
+# Pages CMS (https://pagescms.org) — the editing UI for this site.
+# This file only describes the forms. It holds no passwords or keys:
+# editing still needs a GitHub login with write access to this repository.
+
+media:
+  - name: images
+    label: Images
+    input: src/images
+    output: /src/images
+    categories: [image]
+    rename: safe
+
+content:
+  # ---------------------------------------------------------------- projects
+  - name: projects
+    label: Projects
+    type: collection
+    path: content/projects
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    exclude: [projects.11tydata.js]
+    view:
+      fields: [title, categories, start]
+      primary: title
+      sort: [start, title]
+      search: [title, summary, keywords]
+      default:
+        sort: start
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: categories
+        label: Categories
+        description: The first one sets the page address (/projects/<first category>/…).
+        type: select
+        required: true
+        options:
+          multiple: true
+          values: [research, design, artwork, photography, collections, teaching]
+      - name: start
+        label: Start year
+        type: number
+        required: true
+      - name: end
+        label: End year
+        description: A year, or "present". Leave empty for a one-year piece.
+        type: string
+      - name: years
+        label: Years text (optional)
+        description: Overrides the years shown, e.g. "fall 2026" or "ongoing".
+        type: string
+      - name: summary
+        label: Summary
+        description: One or two sentences for the card.
+        type: text
+        required: true
+      - name: keywords
+        label: Keywords
+        type: string
+        list: true
+      - name: research_question
+        label: Research question
+        description: Leave empty to hide this section.
+        type: text
+      - name: medium
+        label: Medium
+        type: string
+      - name: context
+        label: Made for
+        description: e.g. a class, commission or exhibition.
+        type: string
+      - name: collaborators
+        label: With (collaborators)
+        type: string
+      - name: hero
+        label: Hero image
+        type: image
+        options:
+          media: images
+      - name: hero_alt
+        label: Hero image description (alt text)
+        type: string
+      - name: process
+        label: Process images
+        description: Shown as a gallery. Leave empty to hide this section.
+        type: image
+        options:
+          media: images
+          multiple: true
+      - name: outputs
+        label: Outputs
+        description: Papers, exhibitions, talks, press. Leave empty to hide this section.
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: url
+            label: Link
+            type: string
+          - name: note
+            label: Note
+            type: string
+      - name: tint
+        label: Placeholder colour
+        description: Shown until there's a hero image, e.g. "#f2c14e".
+        type: string
+      - name: body
+        label: Overview
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+
+  # ----------------------------------------------------------------- updates
+  - name: updates
+    label: Updates
+    type: collection
+    path: content/updates
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}_{primary}.md"
+    exclude: [updates.11tydata.js]
+    view:
+      fields: [title, date, project]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: project
+        label: Related project(s)
+        description: Project file names without ".md", e.g. touchbase.
+        type: string
+        list: true
+      - name: excerpt
+        label: Excerpt
+        description: Two or three lines for the feed and the updates list.
+        type: text
+      - name: image
+        label: Cover image
+        type: image
+        options:
+          media: images
+      - name: image_alt
+        label: Cover image description (alt text)
+        type: string
+      - name: tint
+        label: Placeholder colour
+        type: string
+      - name: body
+        label: Post
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+
+  # -------------------------------------------------------------- about / bio
+  - name: about
+    label: Bio (landing page)
+    type: file
+    path: content/about.md
+    format: yaml-frontmatter
+    fields:
+      - name: heading
+        label: Heading
+        type: string
+      - name: permalink
+        type: boolean
+        hidden: true
+        default: false
+      - name: body
+        label: Bio
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+
+  # ----------------------------------------------------------- site settings
+  - name: site
+    label: Site settings
+    type: file
+    path: _data/site.json
+    format: json
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: tagline
+        label: Tagline lines
+        type: string
+        list: true
+      - name: pronouns
+        label: Pronouns
+        type: string
+      - name: location
+        label: Location
+        type: string
+      - name: email_display
+        label: Email (as shown)
+        description: Written out so spam bots can't read it, e.g. "cls663 @ nyu dot edu".
+        type: string
+      - name: cv
+        label: CV link
+        description: Upload cv.pdf to src/static in GitHub, or link to a hosted PDF.
+        type: string
+      - name: portrait
+        label: Portrait
+        type: image
+        options:
+          media: images
+      - name: portrait_alt
+        label: Portrait description (alt text)
+        type: string
+      - name: description
+        label: Site description (for search results and link previews)
+        type: text
+      - name: url
+        label: Site address
+        type: string
+      - name: categories
+        label: Categories (nav order)
+        type: string
+        list: true
+      - name: nav_years
+        label: Categories that show years in the nav
+        type: string
+        list: true

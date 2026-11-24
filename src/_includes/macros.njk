@@ -1,0 +1,24 @@
+{#- pic: a real (auto-resized) image if the file exists next to the content file, else a grey placeholder box.
+    file: "hero.jpg" or {src, alt}; item: the collection item / page whose folder holds it. -#}
+{% macro pic(file, inputPath, alt, cls, tint, sizes, label) -%}
+{%- set src = file | imgSrc(inputPath) -%}
+{%- if src -%}
+<div class="pic {{ cls }}"><img src="{{ src }}" alt="{{ file | imgAlt(alt) }}" sizes="{{ sizes or '(min-width: 900px) 800px, 100vw' }}"></div>
+{%- else -%}
+<div class="pic ph {{ cls }}" style="background:{{ tint or '#c9c3b6' }}" aria-hidden="true"><span>[{{ label or 'image' }}]</span></div>
+{%- endif -%}
+{%- endmacro %}
+
+{#- feed-row: date + title + excerpt (landing feed, related updates) -#}
+{% macro feedRow(u, showExcerpt) -%}
+<a class="frow" href="{{ u.url }}"><span class="fdate">{{ u.date | isoDate }}</span><span class="fmain"><span class="ftitle">{{ u.data.title }}</span>{% if showExcerpt and u.data.excerpt %}<span class="fex">{{ u.data.excerpt }}</span>{% endif %}</span></a>
+{%- endmacro %}
+
+{#- re: project link(s) for an update -#}
+{% macro reProjects(u, projects) -%}
+{%- for slug in u.data.project | aslist -%}
+{%- set p = projects | projectBySlug(slug) -%}
+{%- if loop.first %} · re: {% else %}, {% endif -%}
+{%- if p %}<a href="{{ p.url }}">{{ p.data.title }}</a>{% else %}{{ slug }}{% endif -%}
+{%- endfor -%}
+{%- endmacro %}

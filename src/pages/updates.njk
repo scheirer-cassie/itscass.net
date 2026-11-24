@@ -1,0 +1,16 @@
+---
+layout: base.njk
+permalink: /updates/
+title: updates
+description: Notes, progress and news from my work.
+pathbar: "~/updates/"
+pathbarH1: true
+---
+<p class="intro">notes, progress and news from my work.</p>
+<div class="posts">
+{%- for u in collections.updates %}
+{% include "post-card.njk" %}
+{%- else %}
+<p class="meta">no updates yet.</p>
+{%- endfor %}
+</div>

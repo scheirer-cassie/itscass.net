@@ -1,0 +1,45 @@
+{#- Left nav: portrait, name, tagline, projects/ tree, updates/, contact.
+    Folders on the current page's path render open at build time (data-current). -#}
+{%- set url = page.url %}
+{%- set inProjects = url.startsWith("/projects/") %}
+{%- set inUpdates = url.startsWith("/updates/") %}
+<aside class="side">
+<div class="portrait">
+{%- set portrait = site.portrait | imgSrc("src/x") %}
+{%- if portrait %}<img src="{{ portrait }}" alt="{{ site.portrait_alt }}" sizes="(min-width: 901px) 290px, 90px" loading="eager" fetchpriority="high">{% else %}<span aria-hidden="true">[portrait]</span>{% endif -%}
+</div>
+<div class="who">
+<a class="name{% if url == '/' %} here{% endif %}" href="/"{% if url == '/' %} aria-current="page"{% endif %}>{{ site.name }}</a>
+<p class="tagline">{% for line in site.tagline | aslist %}<span>{{ line }}</span>{% endfor %}</p>
+</div>
+<nav class="tree" aria-label="Site">
+<div class="folder" data-folder="projects"{% if inProjects %} data-current{% endif %}>
+<div class="row{% if url == '/projects/' %} here{% endif %}">
+<button type="button" class="tog" aria-expanded="{{ 'true' if inProjects else 'false' }}" aria-controls="f-projects"><span class="mk" aria-hidden="true"></span><span class="sr">show or hide projects</span></button>
+<a href="/projects/" data-idx{% if url == '/projects/' %} aria-current="page"{% endif %}>projects/</a>
+</div>
+<ul class="kids{% if not inProjects %} closed{% endif %}" id="f-projects">
+{%- for cat in site.categories %}
+{%- set catOpen = (navCat == cat) %}
+{%- set catUrl = "/projects/" + cat + "/" %}
+<li class="folder" data-folder="{{ cat }}"{% if catOpen %} data-current{% endif %}>
+<div class="row{% if url == catUrl %} here{% endif %}">
+<button type="button" class="tog" aria-expanded="{{ 'true' if catOpen else 'false' }}" aria-controls="f-{{ cat }}"><span class="mk" aria-hidden="true"></span><span class="sr">show or hide {{ cat }}</span></button>
+<a href="{{ catUrl }}" data-idx data-opens="{{ cat }}"{% if url == catUrl %} aria-current="page"{% endif %}>{{ cat }}/</a>
+</div>
+<ul class="kids leaves{% if not catOpen %} closed{% endif %}" id="f-{{ cat }}">
+{%- for p in collections.projects | inCategory(cat) %}{# newest first #}
+<li><a href="{{ p.url }}"{% if p.url == url %} class="here" aria-current="page"{% endif %}>{{ p.data.title }}{% if cat in site.nav_years %} ({{ p.data.start }}){% endif %}</a></li>
+{%- endfor %}
+</ul>
+</li>
+{%- endfor %}
+</ul>
+</div>
+<div class="row upd{% if inUpdates %} here{% endif %}">
+<span class="mk-upd" aria-hidden="true">[&gt;]</span>
+<a href="/updates/"{% if url == '/updates/' %} aria-current="page"{% endif %}>updates/</a>
+</div>
+</nav>
+<p class="contact">{{ site.pronouns }} | {{ site.location }}<br><a href="{{ site.cv }}">cv.pdf</a> | {{ site.email_display }}</p>
+</aside>

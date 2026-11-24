@@ -1,0 +1,25 @@
+---
+permalink: /updates/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}/">
+<title>{{ site.name }} — updates</title>
+<subtitle>Notes, progress and news from my work.</subtitle>
+<link href="{{ site.url }}/updates/feed.xml" rel="self"/>
+<link href="{{ site.url }}/updates/"/>
+<updated>{{ collections.updates | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+<id>{{ site.url }}/updates/</id>
+<author><name>{{ site.name }}</name></author>
+{%- for u in collections.updates %}
+{%- set absUrl = site.url + u.url %}
+<entry>
+<title>{{ u.data.title }}</title>
+<link href="{{ absUrl }}"/>
+<updated>{{ u.date | dateToRfc3339 }}</updated>
+<id>{{ absUrl }}</id>
+{%- if u.data.excerpt %}<summary>{{ u.data.excerpt }}</summary>{% endif %}
+<content type="html">{{ u.content | htmlToAbsoluteUrls(absUrl) }}</content>
+</entry>
+{%- endfor %}
+</feed>

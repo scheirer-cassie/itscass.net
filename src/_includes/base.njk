@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- set pageTitle = (title + " · " + site.name) if (title and page.url != "/") else (site.name + " — research, teaching & art") %}
+{%- set pageDesc = description or summary or excerpt or site.description %}
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDesc }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="{{ 'article' if layout == 'post.njk' else 'website' }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDesc }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{%- set ogImg = (hero or image) | imgSrc(page.inputPath) %}
+{%- if ogImg %}
+<meta property="og:image" content="{{ site.url }}{{ ogImg }}">
+<meta name="twitter:card" content="summary_large_image">
+{%- else %}
+<meta name="twitter:card" content="summary">
+{%- endif %}
+<link rel="alternate" type="application/atom+xml" title="{{ site.name }} — updates" href="/updates/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">skip to content</a>
+<div class="wrap">
+{% include "nav.njk" %}
+<main id="main" class="content">
+{% if pathbar %}{% include "pathbar.njk" %}{% endif %}
+{{ content | safe }}</main>
+</div>
+</body>
+</html>

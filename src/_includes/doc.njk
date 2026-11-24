@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+{#- The white README page shared by project pages and update posts. -#}
+<a class="lnk cdup" href="{{ cdup }}"{% if cdup.startsWith('/projects/') %} data-idx{% endif %}>cd ..</a>
+<article class="doc">
+{{ content | safe }}
+</article>

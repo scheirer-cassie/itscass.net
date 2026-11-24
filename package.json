@@ -1,0 +1,15 @@
+{
+  "name": "itscass.net",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "@11ty/eleventy-img": "^7.1.1",
+    "@11ty/eleventy-plugin-rss": "^3.1.0"
+  }
+}

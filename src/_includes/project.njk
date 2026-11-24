@@ -1,0 +1,67 @@
+---
+layout: doc.njk
+---
+{%- from "macros.njk" import pic, feedRow -%}
+<p class="rfile">{{ slug }}/README.txt</p>
+<h1 class="dtitle">{{ title }}</h1>
+<dl class="rdl">
+<dt>YEARS</dt><dd>{{ { years: years, start: start, end: end } | years }}</dd>
+{%- if medium %}
+<dt>MEDIUM</dt><dd>{{ medium }}</dd>
+{%- endif %}
+{%- if context %}
+<dt>MADE FOR</dt><dd>{{ context }}</dd>
+{%- endif %}
+{%- if collaborators %}
+<dt>WITH</dt><dd>{{ collaborators }}</dd>
+{%- endif %}
+<dt>TYPE</dt><dd>{% for c in categories %}<a href="/projects/{{ c }}/" data-idx>{{ c }}</a>{% if not loop.last %} / {% endif %}{% endfor %}</dd>
+{%- if keywords and keywords.length %}
+<dt>KEYWORDS</dt><dd class="ptags">{% for k in keywords %}<a href="/projects/?kw={{ k | kwslug }}" data-idx>{{ k }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+{%- endif %}
+</dl>
+{{ pic(hero, page.inputPath, hero_alt or title, "hero", tint, "(min-width: 1200px) 840px, 100vw", "hero image") }}
+
+<h2 class="sect">## overview</h2>
+<div class="prose">
+{%- if content | trim %}{{ content | safe }}{% else %}<p>{{ summary }}</p>{% endif %}
+</div>
+
+{%- if research_question %}
+<h2 class="sect">## research question</h2>
+<blockquote class="rq">{{ research_question }}</blockquote>
+{%- endif %}
+
+{%- if process and process.length %}
+<h2 class="sect">## process</h2>
+<div class="gal">
+{%- for img in process %}
+{{ pic(img, page.inputPath, title + " — process image " + loop.index, "sq", "#e4e4e4", "(min-width: 900px) 280px, 50vw") }}
+{%- endfor %}
+</div>
+{%- endif %}
+
+{%- if outputs and outputs.length %}
+<h2 class="sect">## outputs</h2>
+<ul class="outs">
+{%- for o in outputs %}
+<li>{% if o.url %}<a href="{{ o.url }}">{{ o.label }}</a>{% else %}{{ o.label }}{% endif %}{% if o.note %} <span class="meta">— {{ o.note }}</span>{% endif %}</li>
+{%- endfor %}
+</ul>
+{%- endif %}
+
+<h2 class="sect">## related updates</h2>
+{%- set related = collections.updates | relatedUpdates(slug) %}
+{%- if related.length %}
+<div class="related">{% for u in related %}{{ feedRow(u, false) }}{% endfor %}</div>
+{%- else %}
+<p class="meta">no updates yet.</p>
+{%- endif %}
+
+{%- set nb = collections.projectsNav | neighbours(page.url) %}
+{%- if nb %}
+<nav class="pn" aria-label="More projects">
+<a class="lnk" href="{{ nb.prev.url }}" rel="prev">← {{ nb.prev.data.title }}</a>
+<a class="lnk" href="{{ nb.next.url }}" rel="next">{{ nb.next.data.title }} →</a>
+</nav>
+{%- endif %}

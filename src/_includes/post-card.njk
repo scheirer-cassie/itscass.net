@@ -1,0 +1,12 @@
+{%- from "macros.njk" import pic, reProjects -%}
+<article class="post">
+<p class="rfile">{{ u.data.fileName }}</p>
+<div class="postgrid">
+<a class="imglink" href="{{ u.url }}" tabindex="-1" aria-hidden="true">{{ pic(u.data.image, u.inputPath, u.data.image_alt or u.data.title, "pimg", u.data.tint, "(min-width: 900px) 220px, 100vw") }}</a>
+<div class="postbody">
+<p class="meta">{{ u.date | isoDate }}{{ reProjects(u, collections.projects) }}</p>
+<h2 class="ptitle"><a class="tlink" href="{{ u.url }}">{{ u.data.title }}</a></h2>
+{%- if u.data.excerpt %}<p class="blurb">{{ u.data.excerpt }}</p>{% endif %}
+</div>
+</div>
+</article>

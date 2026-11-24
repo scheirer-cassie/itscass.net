@@ -1,0 +1,20 @@
+---
+layout: doc.njk
+---
+{%- from "macros.njk" import pic, reProjects -%}
+<p class="rfile">{{ fileName }}</p>
+<h1 class="dtitle">{{ title }}</h1>
+<p class="meta">posted <time datetime="{{ page.date | isoDate }}">{{ page.date | isoDate }}</time>{{ reProjects({ data: { project: project } }, collections.projects) }}</p>
+{%- if image %}
+{{ pic(image, page.inputPath, image_alt or title, "hero", tint, "(min-width: 1200px) 840px, 100vw") }}
+{%- endif %}
+<div class="prose">
+{{ content | safe }}
+</div>
+{%- set i = collections.updates | indexOfUrl(page.url) %}
+{%- set newer = collections.updates[i - 1] if i > 0 else null %}
+{%- set older = collections.updates[i + 1] if i > -1 else null %}
+<nav class="pn" aria-label="More updates">
+{%- if older %}<a class="lnk" href="{{ older.url }}" rel="prev">← older: {{ older.data.title }}</a>{% else %}<span></span>{% endif %}
+{%- if newer %}<a class="lnk" href="{{ newer.url }}" rel="next">newer: {{ newer.data.title }} →</a>{% endif %}
+</nav>

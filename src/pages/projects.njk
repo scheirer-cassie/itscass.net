@@ -1,0 +1,10 @@
+---
+layout: base.njk
+permalink: /projects/
+title: projects
+description: All projects — research, teaching, artwork, photography, design and cameras.
+pathbar: "~/projects/"
+pathbarH1: true
+---
+{%- set list = collections.projects %}
+{% include "projects-index.njk" %}

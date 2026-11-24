@@ -1,0 +1,15 @@
+---
+layout: base.njk
+pagination:
+  data: site.categories
+  size: 1
+  alias: category
+permalink: "/projects/{{ category }}/"
+pathbarH1: true
+eleventyComputed:
+  title: "{{ category }} projects"
+  pathbar: "~/projects/{{ category }}/"
+  navCat: "{{ category }}"
+---
+{%- set list = collections.projects | inCategory(category) %}
+{% include "projects-index.njk" %}

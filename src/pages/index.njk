@@ -1,0 +1,20 @@
+---
+layout: base.njk
+permalink: /
+---
+{%- from "macros.njk" import feedRow -%}
+{%- set about = collections.about[0] %}
+<div class="home">
+<section class="bio" aria-labelledby="hello">
+<h1 class="hello" id="hello">{{ about.data.heading or "HEY!" }}</h1>
+<div class="prose">{{ about.content | safe }}</div>
+</section>
+<section class="feed" aria-labelledby="recent">
+<div class="feedh"><h2 id="recent">recent updates</h2><a class="lnk" href="/updates/">all updates →</a></div>
+{%- for u in collections.updates.slice(0, 3) %}
+{{ feedRow(u, true) }}
+{%- else %}
+<p class="frow meta">nothing here yet.</p>
+{%- endfor %}
+</section>
+</div>

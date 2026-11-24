@@ -1,0 +1,10 @@
+{#- The ~/… file path for the current page. Index pages use it as their <h1>. -#}
+{%- set tag = "h1" if pathbarH1 else "p" %}
+<div class="pathbar">
+<{{ tag }} class="path" id="path">
+{%- for c in (pathbar or "~/") | crumbs -%}
+{%- if c.href %}<a href="{{ c.href }}"{% if c.href != '/' and c.href.startsWith('/projects/') %} data-idx{% endif %}>{{ c.label }}</a>{% else %}<span aria-current="page">{{ c.label }}</span>{% endif -%}
+{%- endfor -%}
+<span id="path-kw"></span>
+</{{ tag }}>
+</div>

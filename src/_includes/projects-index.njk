@@ -1,0 +1,24 @@
+{#- Shared body of /projects/ and /projects/<category>/. Every matching card is in the HTML;
+    site.js reorders/hides them from ?sort= and ?kw=. Controls only show when JS runs. -#}
+<div class="controls js-only">
+<div class="sorts" role="group" aria-label="Sort projects">
+<span class="lbl">sort:</span>
+<button type="button" class="sortb" data-sort="new" aria-pressed="true">newest</button><span class="sep" aria-hidden="true"> | </span><button type="button" class="sortb" data-sort="old" aria-pressed="false">oldest</button><span class="sep" aria-hidden="true"> | </span><button type="button" class="sortb" data-sort="az" aria-pressed="false">a-z</button>
+</div>
+<div class="kwsel">
+<label for="kw">keyword:</label>
+<select id="kw">
+<option value="">all</option>
+{%- for k in collections.keywords %}
+<option value="{{ k.slug }}">{{ k.name }}</option>
+{%- endfor %}
+</select>
+</div>
+</div>
+<p class="status sr" id="status" role="status" aria-live="polite"></p>
+<div class="mason" id="cards">
+{%- for p in list %}
+{% include "readme-card.njk" %}
+{%- endfor %}
+</div>
+<p class="empty" id="empty"{% if list.length %} hidden{% endif %}>no files match. try another keyword.</p>
