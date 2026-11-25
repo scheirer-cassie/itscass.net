@@ -97,7 +97,7 @@
     return false;
   }
 
-  // ---------- sort is kept everywhere ----------
+  // ---------- sort links ----------
   function withSort(href, sort) {
     var u = new URL(href, location.href);
     if (sort && sort !== "new") u.searchParams.set("sort", sort);
@@ -110,9 +110,10 @@
       a.setAttribute("href", withSort(a.getAttribute("href"), sort));
     });
   }
+  // Every page opens newest first; a chosen sort lasts only for that index page.
   function rememberedSort() {
-    var s = session && store.get(SORT_KEY, session);
-    return SORTS[s] ? s : "new";
+    if (session) { try { session.removeItem(SORT_KEY); } catch (e) {} }
+    return "new";
   }
 
   // ---------- 3. projects index ----------
@@ -173,7 +174,6 @@
       pathKw.textContent = s.kw ? "#" + s.kw : "";
       document.title = s.kw ? "#" + s.kw + " · " + baseTitle : baseTitle;
       status.textContent = shown + (shown === 1 ? " project" : " projects") + (s.kw ? " tagged " + validKw[s.kw] : "");
-      if (session) store.set(SORT_KEY, s.sort, session);
       updateIndexLinks(s.sort);
     }
 
@@ -194,13 +194,7 @@
       b.addEventListener("click", function () { go({ sort: b.getAttribute("data-sort") }); });
     });
 
-    // Arriving with no ?sort but a remembered one: keep it ("sort is kept everywhere").
-    var first = new URLSearchParams(location.search);
-    var keep = rememberedSort();
-    if (!first.get("sort") && keep !== "new") {
-      first.set("sort", keep);
-      history.replaceState(null, "", location.pathname + "?" + first.toString());
-    }
+    rememberedSort(); // clears any sort saved by older versions of the site
     render();
     index = { render: render };
   }
