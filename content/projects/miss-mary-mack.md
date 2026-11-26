@@ -3,7 +3,7 @@ title: Miss Mary Mack
 categories:
   - photography
 start: 2026
-years: in progress
+years: ongoing
 summary: A photo editorial on technofascism and surveillance, made with a collaborator.
 keywords:
   - surveillance
