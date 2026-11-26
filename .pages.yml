@@ -2,6 +2,7 @@
 # This file only describes the forms. It holds no passwords or keys:
 # editing still needs a GitHub login with write access to this repository.
 # Projects have a "Show in project lists" switch (listed) to hide them from lists and the nav.
+# Medium and themes are multi-selects (saved as lists); interactive is an on/off switch.
 
 media:
   - name: images
