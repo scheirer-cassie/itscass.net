@@ -16,8 +16,13 @@ const catIndex = (item) => {
   const i = site.categories.indexOf((item.data.categories || [])[0]);
   return i === -1 ? site.categories.length : i;
 };
-// default sort: newest start year first, then title
+// ongoing = end "present", or a years label like "ongoing" / "in progress"
+const isOngoing = (data) =>
+  String(data.end || "").toLowerCase() === "present" ||
+  /\b(ongoing|in progress|present|now)\b/i.test(String(data.years || ""));
+// default sort: ongoing first, then newest start year, then title
 const byNewest = (a, b) =>
+  Number(isOngoing(b.data)) - Number(isOngoing(a.data)) ||
   (Number(b.data.start) || 0) - (Number(a.data.start) || 0) ||
   String(a.data.title).localeCompare(String(b.data.title));
 const byDateDesc = (a, b) => b.date - a.date || b.inputPath.localeCompare(a.inputPath);
@@ -74,9 +79,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("years", (data) => {
     if (data.years) return data.years;
     const { start, end } = data;
-    if (!end || end === "present") return `${start}–now`;
+    if (!end) return String(start); // empty end = a one-year piece
+    if (end === "present") return `${start}–now`;
     return String(end) === String(start) ? String(start) : `${start}–${end}`;
   });
+
+  eleventyConfig.addFilter("isOngoing", (data) => isOngoing(data || {}));
 
   eleventyConfig.addFilter("inCategory", (items, cat) =>
     (items || []).filter((p) => asList(p.data.categories).includes(cat))

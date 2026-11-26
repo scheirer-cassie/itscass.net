@@ -159,13 +159,14 @@
       return {
         el: el,
         start: Number(el.getAttribute("data-start")) || 0,
+        ongoing: el.hasAttribute("data-ongoing") ? 1 : 0,
         title: el.getAttribute("data-title") || "",
         kw: el.getAttribute("data-kw") || ""
       };
     });
     var byTitle = function (a, b) { return a.title.localeCompare(b.title); };
     var compare = {
-      "new": function (a, b) { return b.start - a.start || byTitle(a, b); },
+      "new": function (a, b) { return b.ongoing - a.ongoing || b.start - a.start || byTitle(a, b); },
       old: function (a, b) { return a.start - b.start || byTitle(a, b); },
       az: byTitle
     };

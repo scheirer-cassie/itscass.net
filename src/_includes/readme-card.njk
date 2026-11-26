@@ -1,5 +1,5 @@
 {%- from "macros.njk" import pic -%}
-<article class="readme" data-start="{{ p.data.start }}" data-title="{{ p.data.title | lower }}" data-kw="{% for k in p.data.keywords %}|{{ k | kwslug }}{% endfor %}|">
+<article class="readme" data-start="{{ p.data.start }}"{% if p.data | isOngoing %} data-ongoing{% endif %} data-title="{{ p.data.title | lower }}" data-kw="{% for k in p.data.keywords %}|{{ k | kwslug }}{% endfor %}|">
 <p class="rfile">{{ p.data.slug }}/README.txt</p>
 <a class="imglink" href="{{ p.url }}" tabindex="-1" aria-hidden="true">{{ pic(p.data.hero, p.inputPath, p.data.hero_alt or p.data.title, "rimg", p.data.tint, "(min-width: 900px) 400px, 100vw") }}</a>
 <dl class="rdl">
