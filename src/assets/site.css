@@ -170,12 +170,19 @@ html:not(.js) .tog .mk::before { content: "[−]"; }
 .mason.is-masonry { grid-auto-rows: 4px; row-gap: 0; align-items: start; }
 .readme {
   margin: 0;
-  background: var(--panel); border: var(--panel-border); padding: 14px;
+  background: var(--panel); border: var(--panel-border); padding: 18px;
   display: flex; flex-direction: column; gap: 14px;
 }
 .rimg.ph { aspect-ratio: 16 / 9; }
 .readme:nth-child(3n+2) .rimg.ph { aspect-ratio: 4 / 5; }
 .readme:nth-child(3n) .rimg.ph { aspect-ratio: 1 / 1; }
+/* project cards: title, years, image, then the research question or summary */
+.chead { display: flex; flex-direction: column; gap: 4px; }
+.ctitle { margin: 0; font-size: var(--fs-h); line-height: 1.3; }
+.ctitle a { color: var(--ink); text-decoration: none; }
+.ctitle a:hover { text-decoration: underline; }
+.cyears { margin: 0; font-style: italic; font-size: var(--fs-meta); color: var(--ink-quiet); }
+.ctext { margin: 0; font-size: 15.5px; line-height: 1.6; }
 .rdl { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 12px 18px; padding: 4px 2px; margin: 0; font-size: var(--fs-meta); line-height: 1.5; }
 .rdl dt { font-weight: 700; color: var(--ink-quiet); }
 .rdl dd { margin: 0; }

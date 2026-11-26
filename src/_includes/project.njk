@@ -22,15 +22,16 @@ layout: doc.njk
 </dl>
 {{ pic(hero, page.inputPath, hero_alt or title, "hero", tint, "(min-width: 1200px) 840px, 100vw", "hero image") }}
 
+{%- if research_question %}
+<h2 class="sect">## research question</h2>
+<blockquote class="rq">{{ research_question }}</blockquote>
+{%- endif %}
+
 <h2 class="sect">## overview</h2>
 <div class="prose">
 {%- if content | trim %}{{ content | safe }}{% else %}<p>{{ summary }}</p>{% endif %}
 </div>
 
-{%- if research_question %}
-<h2 class="sect">## research question</h2>
-<blockquote class="rq">{{ research_question }}</blockquote>
-{%- endif %}
 
 {%- if process and process.length %}
 <h2 class="sect">## process</h2>
