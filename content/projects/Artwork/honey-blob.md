@@ -9,4 +9,4 @@ medium: "Interactive sculpture. Fabric, thread, yarn, magnets, zipper, buttons, 
 tint: "#f0c987"
 # imported from https://www.itscass.net/honey-blob
 ---
-An interactive soft-sculpture and video (3:11), part of [Narrative Objects](/projects/research/immersive-art-protection-plan/), a body of art-based research into what makes static art immersive.
+An interactive soft-sculpture and video (3:11), part of [Narrative Objects](/projects/artwork/immersive-art-protection-plan/), a body of art-based research into what makes static art immersive.

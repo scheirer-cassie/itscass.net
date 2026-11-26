@@ -21,7 +21,7 @@
   },
   {
     "from": "/projects/research/immersive_art_protection_plan/",
-    "to": "/projects/research/immersive-art-protection-plan/"
+    "to": "/projects/artwork/immersive-art-protection-plan/"
   },
   {
     "from": "/projects/teaching/intro_to_programming/",
@@ -94,5 +94,9 @@
   {
     "from": "/updates/2026-11-18_touchbase/",
     "to": "/updates/2026-11-18-touchbase/"
+  },
+  {
+    "from": "/projects/research/immersive-art-protection-plan/",
+    "to": "/projects/artwork/immersive-art-protection-plan/"
   }
 ]

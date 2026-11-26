@@ -9,4 +9,4 @@ medium: "Interactive sculpture. Inkjet print on canvas, pine, acrylic, polymer c
 tint: "#d9a6c2"
 # imported from https://www.itscass.net/performance-of-little-windows
 ---
-Part of [Narrative Objects](/projects/research/immersive-art-protection-plan/), a body of art-based research into what makes static art immersive. The sculpture was developed over several iterations and prototypes before its final construction.
+Part of [Narrative Objects](/projects/artwork/immersive-art-protection-plan/), a body of art-based research into what makes static art immersive. The sculpture was developed over several iterations and prototypes before its final construction.

@@ -9,4 +9,4 @@ medium: "Poetry and illustration. Ink on paper, 8.5” x 11” x 11 pages."
 tint: "#e0d6b0"
 # imported from https://www.itscass.net/ten-dollar-story
 ---
-An illustrated poem in eleven pages of ink on paper, made as part of [Imagining Immersive Worlds](/projects/research/immersive-art-protection-plan/), the first sub-question of the Immersive Art Protection Plan.
+An illustrated poem in eleven pages of ink on paper, made as part of [Imagining Immersive Worlds](/projects/artwork/immersive-art-protection-plan/), the first sub-question of the Immersive Art Protection Plan.
