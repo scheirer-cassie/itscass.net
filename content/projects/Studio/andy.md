@@ -12,7 +12,7 @@ medium:
   - image
 interactive: false
 materials: Fashion editorials.
-collaborators: Julie Scharf (costume design)
+collaborators: Julie Scharf
 outputs:
   - label: Cameo Vintage — July 2023. Advertisement for Cameo Vintage, Pittsburgh, PA.
   - label: "So What? #3 — July 2023. Advertisement for Sowa Vintage Market, Boston,
