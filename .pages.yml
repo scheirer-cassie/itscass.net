@@ -122,7 +122,7 @@ content:
     type: collection
     path: content/updates
     format: yaml-frontmatter
-    filename: "{year}-{month}-{day}_{primary}.md"
+    filename: "{year}-{month}-{day}-{primary}.md"
     exclude: [updates.11tydata.js]
     view:
       fields: [title, date, project]

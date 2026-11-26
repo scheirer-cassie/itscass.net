@@ -1,6 +1,7 @@
-// Every content/updates/YYYY-MM-DD_slug.md gets these defaults.
-// URL = /updates/YYYY-MM-DD_slug/ ; the path header shows the .md file name.
-const base = (data) => data.page.filePathStem.split("/").pop();
+// Every content/updates/YYYY-MM-DD-slug.md gets these defaults.
+// URL = /updates/YYYY-MM-DD-slug/ ; the path header shows the .md file name.
+// (inputPath, not filePathStem: Eleventy drops a leading YYYY-MM-DD- from the stem)
+const base = (data) => data.page.inputPath.split("/").pop().replace(/\.md$/, "");
 
 export default {
   layout: "post.njk",

@@ -39,8 +39,8 @@ With my goal as an artist being to educate and to heal, I am curious about the i
 
 In this body of work I explore how supplementing static visual media with a poetic “script” can create immersion by engineering the art-viewing experience into a hybrid game-performance. As the viewer reads the script, which details a scene related to the artwork, they (hopefully) decipher instructions within the text about how to interact with and interpret the artwork, as well as how to interpret their own role as the actor in the performance of interaction. The artwork is like a set that has been designed for the viewer, and hence the viewer becomes key to the success of the artwork.
 
-- [“Performance of Little Windows”](/projects/artwork/performance_of_little_windows/) (2023). Interactive sculpture.
-- [“Honey / blob”](/projects/artwork/honey_blob/) (2022). Interactive soft-sculpture and video.
+- [“Performance of Little Windows”](/projects/artwork/performance-of-little-windows/) (2023). Interactive sculpture.
+- [“Honey / blob”](/projects/artwork/honey-blob/) (2022). Interactive soft-sculpture and video.
 
 ### Science · Immersive Art and Cognition
 
