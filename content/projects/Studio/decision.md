@@ -1,10 +1,12 @@
 ---
 title: Decision
+listed: true
 categories:
   - studio
 start: 2021
-end: 2021
-summary: A game, poem and exercise built from a 60-page manual, an acrylic die stencil and a roll of tape — asking whether embracing chance can create mindfulness.
+summary: A game, poem and exercise built from a 60-page manual, an acrylic die
+  stencil and a roll of tape — asking whether embracing chance can create
+  mindfulness.
 themes:
   - chance & control
   - intra/interpersonal psychology
@@ -14,9 +16,8 @@ medium:
   - text
 interactive: true
 materials: Game. Ink on paper, acrylic, tape, binder clips; 8.5” x 11” x 60 pages.
-research_question: Can embracing chance create mindfulness?
 context: Artist Writing, Fall 2021
-tint: '#e8e2c8'
+tint: "#e8e2c8"
 ---
 ### Artist Statement
 
@@ -46,7 +47,7 @@ Bogost, Ian. “Play Anything.” Talks at Google. Cambridge. 2017.
 
 I watched this lecture in place of reading Bogost's book, Play Anything. Bogost, an author, game designer, and philosopher, deeply dives into what it means to “play” and suggests that we can frame our lives around play in order to gain mindfulness. He posits that when we are children, the adult world of routine, understanding, and control is not designed for us, so we find fun in the mundane, a playful sort of wisdom, in order to cope. We lose this wisdom as we age and gain expectations. However, when we are adults, the world also seems to not be designed for us, as our routines and learned expectations cause us to perceive so much that we don’t expect, and as a result we ignore little nuances that don’t line up with our realities. He believes that true mindfulness is found in the attention to these nuances, and we need to release control and routine and invite disorder, or randomness, in order to do that. Playing is taking whatever is not designed for you or invested in your experience and treating it as if it were. This inspired me to start paying closer attention to the little things I ignore in my day to day life, to try to find beauty in them. That is essentially the intention of this project as well. I offer lists of choices, including poetic nuances, as examples to inspire a similar reframing in my participants. They are not necessarily obligated to play with my own offerings though, or even obligated to play at all. In fact, I think the cognition of possibly completing the game is enough to be considered play.
 
-Feingold, Ken. “OU: Interactivity as Divination as Vending Machine.” Leonardo, vol. 28, no. 5, 1995, pp. 399–402., https://doi.org/https://doi.org/10.2307/1576224.
+Feingold, Ken. “OU: Interactivity as Divination as Vending Machine.” Leonardo, vol. 28, no. 5, 1995, pp. 399–402., [https://doi.org/https://doi.org/10.2307/1576224](https://doi.org/https://doi.org/10.2307/1576224).
 
 I came across this incredible article when I was looking for information about why, psychologically, people might seek out divination, as dice are historically used as a divination instrument. Briefly, Feingold supposes that it stems from our need for conflict resolution, a fear of death, and a desperation to have control over our own lives. However, he continues into a philosophical discussion about what it means for something to be interactive, and how we have an innate narcissistic desire to be recognized, appreciated, and validated in works that call for our participation. These conversations are very relevant to my own art practice, with my interest in analog interactivity, as well as this project being framed as a "game." It informed my intention to design my project as an offering rather than an obligation.
 
@@ -54,14 +55,14 @@ Jensen, Jonas IB F. H. “The Aesthetics of Chance.” Self, 2011.
 
 This document seems to be a personal essay by a Norwegian artist. I don't believe it was formally published anywhere, it simply exists on the artist's website. While I'm uncertain of the reliability of this source, as there are no references at the end and there are a lot of errors (probably as a result of translating from Norwegian to English), it is a comprehensive and interesting overview of various 20th century chance-focused artists (Marcel Duchamp, Jackson Pollock, John Cage, George Brecht, Hans Arp, etc) that explains how different applications of chance operations, automation and randomness can create metaphor in art, and how the artists have a common motivation to distance their bodies and minds from their artmaking processes in order to become more mindful and self-aware. The work created from these techniques may become a reflection of one's subconscious thoughts, allowing previously censored ideas or artmaking methods to present themselves. It illustrates how releasing control over decision-making can aid in our search for mindfulness, and that art as experimentation can be more useful than just aesthetically and conceptually.
 
-Lostritto, Carl. “The Value of Randomness in Art and Design.” Fast Company, Fast Company, 19 Oct. 2015, https://www.fastcompany.com/3052333/the-value-of-randomness-in-art-and-design.
+Lostritto, Carl. “The Value of Randomness in Art and Design.” Fast Company, Fast Company, 19 Oct. 2015, [https://www.fastcompany.com/3052333/the-value-of-randomness-in-art-and-design](https://www.fastcompany.com/3052333/the-value-of-randomness-in-art-and-design).
 
 Carl Lostritto is a professor of computational design at RISD and the founder and operator of the RISD/Brown creative code organization RISD Code Studio. In this article he discusses the affordances that randomness offers to art and design, especially when it comes to creative coding and computational design. He first explains how a random number generated by a computer is not truly random, and then rationalizes why an artist or designer (computational or not) might use randomness in their practices. In his words, "randomness can serve as weak rationale for the arbitrary... can fill in the unimportant blanks... can satisfy the need for surprise... [and] can be used to emphasize the algorithm over the results." While he was talking about art, I realized that these rationales also reflect our everyday decision-making processes. Similarly to Ian Bogost's discussion about play as a framework for mindfulness, making an effort to be less fixated on the future and allowing randomness into your life can wash away expectations and routines that have built up over time and obscure the excitement of newness from the comparison of new experiences to old ones. It allows us to be more present, working with the results that are presented to us, instead of curating life from a third person perspective, or trying to perfect the algorithm.
 
-Taylor, Richard. “Fractal Patterns in Nature and Art Are Aesthetically Pleasing and Stress-Reducing.” The Conversation, 30 Mar. 2017, https://theconversation.com/fractal-patterns-in-nature-and-art-are-aesthetically-pleasing-and-stress-reducing-73255.
+Taylor, Richard. “Fractal Patterns in Nature and Art Are Aesthetically Pleasing and Stress-Reducing.” The Conversation, 30 Mar. 2017, [https://theconversation.com/fractal-patterns-in-nature-and-art-are-aesthetically-pleasing-and-stress-reducing-73255](https://theconversation.com/fractal-patterns-in-nature-and-art-are-aesthetically-pleasing-and-stress-reducing-73255).
 
 The Conversation is an online media outlet for academic professionals and researchers to publish news articles on subjects in their fields. This article discusses a study from 1999 that shows how fractal patterns found in art, nature, and mathematics are aesthetically pleasing to process psychologically, an effect the researchers defined as "fractal fluency". Fractals are a visual expression of repetition and routine, but their structures are also used to describe the chaotic nature of decision making, especially the symbol of trees. The author discusses fractals and algorithmic art using Jackson Pollock's work, who iteratively improved on his art-making process in order to make his fractals more complicated, and thus harder to find symbols in and less pleasing to experience. This is interesting because it illustrates how the human entitlement to routine and ease is based in our biology, making it especially hard to become aware of and mindfully question.
 
-Various. “Dice.” Wikipedia, Wikimedia Foundation, 10 Sept. 2021, https://en.wikipedia.org/wiki/Dice#cite_note-37.
+Various. “Dice.” Wikipedia, Wikimedia Foundation, 10 Sept. 2021, [https://en.wikipedia.org/wiki/Dice#cite_note-37](https://en.wikipedia.org/wiki/Dice#cite_note-37).
 
 I found that the Wikipedia article on dice gives the most comprehensive history about the use of dice both as a gaming and a fortune telling object. In both cases, randomness is used to simulate control. I find that this makes them a paradoxical interactive object. User interactivity implies control, right? With dice, there is control in our responsibility to initiate the roll action, and in the laws of physics to create a theoretically calculable trajectory for the dice, but we are incapable of making this calculation in real time, resulting in a lack of control over the outcome of the roll. This conflict is translatable to everyday life. We have a responsibility to make decisions in order to evolve, and it is possible to plan the future, but inevitably there will be obstacles that you will not expect, so obsessively fixating on it is a waste of energy.
