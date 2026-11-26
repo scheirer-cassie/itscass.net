@@ -1,6 +1,7 @@
 # Pages CMS (https://pagescms.org) — the editing UI for this site.
 # This file only describes the forms. It holds no passwords or keys:
 # editing still needs a GitHub login with write access to this repository.
+# Projects have a "Show in project lists" switch (listed) to hide them from lists and the nav.
 
 media:
   - name: images
