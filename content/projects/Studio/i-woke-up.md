@@ -1,20 +1,20 @@
 ---
 title: I woke up
+listed: true
 categories:
   - studio
 start: 2018
-end: 2018
-summary: Four works made as Ahnxe, my anxious alter ego, illustrating how an anxious brain interacts with the world.
+summary: Four works made as Ahnxe, my anxious alter ego, illustrating how an
+  anxious brain interacts with the world.
 themes:
   - intra/interpersonal psychology
-  - creative expression
 medium:
   - object
   - environment
-interactive: false
+interactive: true
 materials: Sculpture, installation, and generative animation. Various dimensions.
 context: The Self and the Human Being, Fall 2018
-tint: '#e4c2a0'
+tint: "#e4c2a0"
 ---
 For my first concept studio, my professor tasked us to design an alter ego and make art with it for the entire semester. I transformed into Ahnxe, my anxious self, and created four pieces that illustrate how my anxious brain interacts with the world.
 
