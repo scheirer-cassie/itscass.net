@@ -1,10 +1,11 @@
 ---
 title: Helix
+listed: true
 categories:
   - studio
 start: 2020
-end: 2020
-summary: A self-built slit-scanning machine capturing spatiotemporal views of personal objects, made into a self-portrait series.
+summary: A self-built slit-scanning machine capturing spatiotemporal views of
+  personal objects, used to create a self-portrait image series.
 themes:
   - childhood & family
   - perception & representation
@@ -14,7 +15,7 @@ medium:
 interactive: false
 materials: Computational photography. Mechanically generated images.
 context: Experimental Capture, Spring 2020
-tint: '#e96aa0'
+tint: "#e96aa0"
 ---
 For my final project in ExCap, I built a slit-scanning machine to capture spatiotemporal views of personal objects, which resulted in a self-portrait series.
 
