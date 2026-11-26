@@ -32,6 +32,11 @@ content:
         label: Title
         type: string
         required: true
+      - name: listed
+        label: Show in project lists
+        description: Turn off to hide this project from the projects pages and the nav. Its page still works for anyone with the link.
+        type: boolean
+        default: true
       - name: categories
         label: Categories
         description: The first one sets the page address (/projects/<first category>/…).

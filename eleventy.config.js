@@ -50,7 +50,11 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("PLAN.md");
 
   // ---- collections (all generated from frontmatter) ----------------------
-  const projects = (api) => api.getFilteredByGlob(["content/projects/*.md", "content/projects/*/index.md"]);
+  // "listed: false" (the "Show in project lists" switch in Pages CMS) keeps a project
+  // out of every list and the nav; its own page is still built and reachable by link.
+  const projects = (api) =>
+    api.getFilteredByGlob(["content/projects/*.md", "content/projects/*/index.md"])
+      .filter((p) => p.data.listed !== false);
   eleventyConfig.addCollection("projects", (api) => projects(api).sort(byNewest));
   // nav order: grouped by first category (in site.json order), newest first inside each
   eleventyConfig.addCollection("projectsNav", (api) =>

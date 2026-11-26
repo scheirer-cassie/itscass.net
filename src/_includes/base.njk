@@ -7,6 +7,9 @@
 {%- set pageDesc = description or summary or excerpt or site.description %}
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ pageDesc }}">
+{%- if listed === false %}
+<meta name="robots" content="noindex">
+{%- endif %}
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="{{ 'article' if layout == 'post.njk' else 'website' }}">
 <meta property="og:site_name" content="{{ site.name }}">
