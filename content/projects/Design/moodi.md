@@ -10,5 +10,6 @@ themes:
 medium:
   - object
 interactive: true
+context: Tangible Electronics for Teaching and Learning, Fall 2024
 collaborators: Ana Shuleva, Minh Nguyen
 ---
