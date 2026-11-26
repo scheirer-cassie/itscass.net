@@ -1,6 +1,8 @@
 // Every project file gets these defaults. A project is either
 //   content/projects/<slug>.md            (what Pages CMS creates), or
 //   content/projects/<slug>/index.md      (folder layout, still supported)
+// It can sit inside any folder (e.g. content/projects/Research/<slug>.md);
+// folders only tidy the editor and never change the page address.
 // URL = /projects/<first category>/<slug>/  (matches the ~/ path header)
 const fileSlug = (data) => {
   const parts = data.page.filePathStem.split("/");

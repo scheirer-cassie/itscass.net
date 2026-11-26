@@ -53,7 +53,7 @@ export default function (eleventyConfig) {
   // "listed: false" (the "Show in project lists" switch in Pages CMS) keeps a project
   // out of every list and the nav; its own page is still built and reachable by link.
   const projects = (api) =>
-    api.getFilteredByGlob(["content/projects/*.md", "content/projects/*/index.md"])
+    api.getFilteredByGlob("content/projects/**/*.md") // any folder depth; folders are just for tidying
       .filter((p) => p.data.listed !== false);
   eleventyConfig.addCollection("projects", (api) => projects(api).sort(byNewest));
   // nav order: grouped by first category (in site.json order), newest first inside each
