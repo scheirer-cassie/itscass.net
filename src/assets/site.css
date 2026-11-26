@@ -164,9 +164,10 @@ html:not(.js) .tog .mk::before { content: "[−]"; }
 .kwsel { display: flex; align-items: center; gap: 6px; }
 .kwsel select { font: inherit; font-size: 15.5px; min-height: 30px; border: var(--panel-border); background: var(--panel); color: var(--ink); padding: 0 4px; max-width: 240px; }
 
-.mason { columns: 2 340px; column-gap: 20px; }
+/* cards read left to right, row by row (newest first); cards in a row share a height */
+.mason { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 20px; }
 .readme {
-  break-inside: avoid; margin: 0 0 20px;
+  margin: 0;
   background: var(--panel); border: var(--panel-border); padding: 14px;
   display: flex; flex-direction: column; gap: 14px;
 }
