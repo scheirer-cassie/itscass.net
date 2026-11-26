@@ -119,9 +119,31 @@
   // ---------- 3. projects index ----------
   var index = null; // { render } while a projects index page is showing
 
+  // ---------- masonry: cards keep their own height, placed left to right ----------
+  // The grid has 4px rows; each card spans as many rows as it is tall, so the
+  // browser drops the next card into the first column with room (row order kept).
+  var ROW = 4, GAP = 20, masonryObs = null;
+  function masonry(grid) {
+    if (masonryObs) { masonryObs.disconnect(); masonryObs = null; }
+    if (!grid || !window.ResizeObserver) return;
+    function fit(card) {
+      var h = card.getBoundingClientRect().height;
+      if (h) card.style.gridRowEnd = "span " + Math.ceil((h + GAP) / ROW);
+    }
+    masonryObs = new ResizeObserver(function (entries) {
+      entries.forEach(function (e) { fit(e.target); });
+    });
+    Array.prototype.forEach.call(grid.querySelectorAll(".readme"), function (c) {
+      fit(c);
+      masonryObs.observe(c);
+    });
+    grid.classList.add("is-masonry");
+  }
+
   function initIndex() {
     index = null;
     var grid = document.getElementById("cards");
+    masonry(grid);
     if (!grid) { updateIndexLinks(rememberedSort()); return; }
 
     var select = document.getElementById("kw");
