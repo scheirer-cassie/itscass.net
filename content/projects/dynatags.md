@@ -3,7 +3,8 @@ title: DynaTags
 categories:
   - research
   - design
-start: 2022
+start: 2021
+end: "2022"
 summary: Low-cost paper mechanisms that let printed fiducial markers express
   multiple states, extending tangible AR interactions.
 keywords:
