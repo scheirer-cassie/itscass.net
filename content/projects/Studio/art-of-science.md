@@ -1,10 +1,11 @@
 ---
 title: Art of Science
+listed: true
 categories:
   - studio
 start: 2021
-end: 2021
-summary: A 15-foot handwritten scroll poem about how my art practice matured from coping with anxiety to exploring queer joy.
+summary: A 15-foot handwritten scroll poem about how my art practice matured
+  from coping with anxiety to exploring queer joy.
 themes:
   - queerness
   - intra/interpersonal psychology
@@ -12,10 +13,10 @@ themes:
 medium:
   - environment
   - text
-interactive: false
+interactive: true
 materials: Installation. Graphite on paper, chair, ladder; 12’ x 4’ x 4’.
 context: Artist Writing, Fall 2021
-tint: '#d8d2c4'
+tint: "#d8d2c4"
 ---
 This piece tells the story of how my art practice thematically matured from a coping mechanism for my anxiety to an exploration of queer joy.
 
@@ -53,7 +54,7 @@ Gerber, Nancy, et al. “Arts-Based Research Approaches to Studying Mechanisms o
 
 This contribution explores how a hybridity of art and research can be used to create mechanisms of change. In scientific research, mechanisms of change are scientifically-proven successful healing methods: the “causal and measurable variables that statistically account for the relationship between a particular therapeutic intervention and outcome”. This is the concept I have been searching for in the last few months to describe how I want to frame my art/research practice. I want to develop new mechanisms of change for identity work with immersive creative experiences.
 
-GoodTherapy Editor Team. “Poetry Therapy.” GoodTherapy, 5 Nov. 2016, www.goodtherapy.org/learn-about-therapy/types/poetry-therapy.
+GoodTherapy Editor Team. “Poetry Therapy.” GoodTherapy, 5 Nov. 2016, [www.goodtherapy.org/learn-about-therapy/types/poetry-therapy](http://www.goodtherapy.org/learn-about-therapy/types/poetry-therapy).
 
 Good Therapy is an informative therapy website which can help a person find a therapist and learn more about different therapy practices. This article gives a general overview of poetry therapy and describes a popular framework for poetry therapy which contextualizes the exercises that are explored in the paper from The Arts in Psychotherapy journal. There are three components to poetry therapy: prescriptive, in which a client is encouraged to react to a piece of writing presented by the therapist; creative, in which a client is encouraged to write their own pieces, guided by the therapist; and symbolic, in which the therapist helps the client explore how metaphor and storytelling can be used to describe the complexity of their reality. Reading this actually gave me a greater appreciation for my own therapist. We had a conversation the other day exploring how my queerness presents itself symbolically in other parts of my life, and I really appreciate that type of creative guidance. I’ve become a very abstract person as I’ve become more passionate about art making, and it’s very exciting to me when I can connect with another person in that sort of performative and excessive way.
 
