@@ -11,4 +11,6 @@ themes:
 medium:
   - object
 interactive: true
+context: Experience Design and Artificial Intelligence, Spring 2025
+collaborators: Melody Hammer, Shengkai Xu
 ---
