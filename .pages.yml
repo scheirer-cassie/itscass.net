@@ -24,7 +24,7 @@ content:
       fields: [title, categories, start]
       primary: title
       sort: [start, title]
-      search: [title, summary, keywords]
+      search: [title, summary, themes]
       default:
         sort: start
         order: desc
@@ -45,7 +45,7 @@ content:
         required: true
         options:
           multiple: true
-          values: [research, design, artwork, photography, collections, teaching]
+          values: [research, design, studio, collections, teaching]
       - name: start
         label: Start year
         type: number
@@ -63,16 +63,42 @@ content:
         description: One or two sentences for the card.
         type: text
         required: true
-      - name: keywords
-        label: Keywords
-        type: string
-        list: true
+      - name: themes
+        label: Themes
+        description: The ideas the work is about (not what it's made of).
+        type: select
+        options:
+          multiple: true
+          values:
+            - queerness
+            - childhood & family
+            - chance & control
+            - intra/interpersonal psychology
+            - perception & representation
+            - science & technology
+            - learning & teaching
+            - creative expression
+            - ritual & collecting
+            - justice & activism
       - name: research_question
         label: Research question
         description: Leave empty to hide this section.
         type: text
       - name: medium
         label: Medium
+        description: Pick all that apply. Visitors can filter the projects page by these.
+        type: select
+        options:
+          multiple: true
+          values: [image, object, environment, text]
+      - name: interactive
+        label: Interactive
+        description: On if people play, touch, take part in or otherwise act on the work.
+        type: boolean
+        default: false
+      - name: materials
+        label: Materials & details
+        description: Shown on the project page, e.g. "Graphite on paper, chair, ladder; 12' x 4' x 4'."
         type: string
       - name: context
         label: Made for

@@ -1,14 +1,21 @@
 ---
-title: "Art of Science"
-categories: [artwork]
+title: Art of Science
+categories:
+  - studio
 start: 2021
 end: 2021
-keywords: ["installation", "poetry", "queerness", "artist writing"]
-summary: "A 15-foot handwritten scroll poem about how my art practice matured from coping with anxiety to exploring queer joy."
-medium: "Installation. Graphite on paper, chair, ladder; 12’ x 4’ x 4’."
-context: "Artist Writing, Fall 2021"
-tint: "#d8d2c4"
-# imported from https://www.itscass.net/art-of-science
+summary: A 15-foot handwritten scroll poem about how my art practice matured from coping with anxiety to exploring queer joy.
+themes:
+  - queerness
+  - intra/interpersonal psychology
+  - creative expression
+medium:
+  - environment
+  - text
+interactive: false
+materials: Installation. Graphite on paper, chair, ladder; 12’ x 4’ x 4’.
+context: Artist Writing, Fall 2021
+tint: '#d8d2c4'
 ---
 This piece tells the story of how my art practice thematically matured from a coping mechanism for my anxiety to an exploration of queer joy.
 

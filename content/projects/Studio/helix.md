@@ -1,14 +1,20 @@
 ---
-title: "Helix"
-categories: [photography, artwork]
+title: Helix
+categories:
+  - studio
 start: 2020
 end: 2020
-keywords: ["slit-scan", "camera building", "computational photography", "self-portrait"]
-summary: "A self-built slit-scanning machine capturing spatiotemporal views of personal objects, made into a self-portrait series."
-medium: "Computational photography. Mechanically generated images."
-context: "Experimental Capture, Spring 2020"
-tint: "#e96aa0"
-# imported from https://www.itscass.net/helix
+summary: A self-built slit-scanning machine capturing spatiotemporal views of personal objects, made into a self-portrait series.
+themes:
+  - childhood & family
+  - perception & representation
+medium:
+  - image
+  - object
+interactive: false
+materials: Computational photography. Mechanically generated images.
+context: Experimental Capture, Spring 2020
+tint: '#e96aa0'
 ---
 For my final project in ExCap, I built a slit-scanning machine to capture spatiotemporal views of personal objects, which resulted in a self-portrait series.
 

@@ -1,7 +1,7 @@
 // itscass.net — the only script. No dependencies.
 // 1. nav tree: [+] markers AND folder names open/close folders (remembered per visitor)
 // 2. page switching without reloads: links swap the content in place, back/forward work
-// 3. projects index sort + keyword filter, kept in the URL (?sort=new|old|az&kw=cs-education)
+// 3. projects index sort + medium / theme / interactive filters, kept in the URL (?sort=old&medium=object&theme=grief&interactive=1)
 // Every page is still a real file and works without it.
 (function () {
   "use strict";
@@ -104,7 +104,7 @@
     else u.searchParams.delete("sort");
     return u.pathname + u.search + u.hash;
   }
-  // Links to /projects/ index pages carry the visitor's sort; going to another category drops the keyword.
+  // Links to /projects/ index pages carry the visitor's sort; going to another category drops the filters.
   function updateIndexLinks(sort) {
     document.querySelectorAll("a[data-idx]").forEach(function (a) {
       a.setAttribute("href", withSort(a.getAttribute("href"), sort));
@@ -147,6 +147,8 @@
     if (!grid) { updateIndexLinks(rememberedSort()); return; }
 
     var select = document.getElementById("kw");
+    var mselect = document.getElementById("md");
+    var inter = document.getElementById("inter");
     var sortBtns = Array.prototype.slice.call(document.querySelectorAll("[data-sort]"));
     var empty = document.getElementById("empty");
     var status = document.getElementById("status");
@@ -154,6 +156,8 @@
     var baseTitle = document.title;
     var validKw = {};
     Array.prototype.forEach.call(select.options, function (o) { if (o.value) validKw[o.value] = o.text; });
+    var validMd = {};
+    Array.prototype.forEach.call(mselect.options, function (o) { if (o.value) validMd[o.value] = o.text; });
 
     var cards = Array.prototype.map.call(grid.querySelectorAll(".readme"), function (el) {
       return {
@@ -161,7 +165,9 @@
         start: Number(el.getAttribute("data-start")) || 0,
         ongoing: el.hasAttribute("data-ongoing") ? 1 : 0,
         title: el.getAttribute("data-title") || "",
-        kw: el.getAttribute("data-kw") || ""
+        kw: el.getAttribute("data-theme") || "",
+        it: el.hasAttribute("data-interactive"),
+        md: el.getAttribute("data-medium") || ""
       };
     });
     var byTitle = function (a, b) { return a.title.localeCompare(b.title); };
@@ -175,9 +181,11 @@
       var q = new URLSearchParams(location.search);
       var sort = q.get("sort");
       if (!SORTS[sort]) sort = "new";
-      var kw = (q.get("kw") || "").toLowerCase();
+      var kw = (q.get("theme") || q.get("kw") || "").toLowerCase();
       if (!validKw[kw]) kw = "";
-      return { sort: sort, kw: kw };
+      var md = (q.get("medium") || "").toLowerCase();
+      if (!validMd[md]) md = "";
+      return { sort: sort, kw: kw, md: md, it: q.get("interactive") === "1" };
     }
 
     function render() {
@@ -185,27 +193,35 @@
       var shown = 0;
       cards.slice().sort(compare[s.sort]).forEach(function (c) {
         grid.appendChild(c.el);
-        var match = !s.kw || c.kw.indexOf("|" + s.kw + "|") !== -1;
+        var match = (!s.kw || c.kw.indexOf("|" + s.kw + "|") !== -1) &&
+          (!s.md || c.md.indexOf("|" + s.md + "|") !== -1) &&
+          (!s.it || c.it);
         c.el.hidden = !match;
         if (match) shown++;
       });
       empty.hidden = shown > 0;
       select.value = s.kw;
+      mselect.value = s.md;
+      inter.setAttribute("aria-pressed", String(s.it));
       sortBtns.forEach(function (b) {
         b.setAttribute("aria-pressed", String(b.getAttribute("data-sort") === s.sort));
       });
-      pathKw.textContent = s.kw ? "#" + s.kw : "";
-      document.title = s.kw ? "#" + s.kw + " · " + baseTitle : baseTitle;
-      status.textContent = shown + (shown === 1 ? " project" : " projects") + (s.kw ? " tagged " + validKw[s.kw] : "");
+      var tags = [s.md, s.it ? "interactive" : "", s.kw].filter(Boolean).map(function (t) { return "#" + t; }).join(" ");
+      pathKw.textContent = tags;
+      document.title = tags ? tags + " · " + baseTitle : baseTitle;
+      status.textContent = shown + (shown === 1 ? " project" : " projects") +
+        (s.md ? " in " + validMd[s.md] : "") + (s.it ? ", interactive" : "") + (s.kw ? " about " + validKw[s.kw] : "");
       updateIndexLinks(s.sort);
     }
 
     function go(change) {
       var s = readState();
-      var next = { sort: change.sort || s.sort, kw: "kw" in change ? change.kw : s.kw };
+      var next = { sort: change.sort || s.sort, kw: "kw" in change ? change.kw : s.kw, md: "md" in change ? change.md : s.md, it: "it" in change ? change.it : s.it };
       var q = new URLSearchParams();
       if (next.sort !== "new") q.set("sort", next.sort);
-      if (next.kw) q.set("kw", next.kw);
+      if (next.md) q.set("medium", next.md);
+      if (next.it) q.set("interactive", "1");
+      if (next.kw) q.set("theme", next.kw);
       var qs = q.toString();
       // a keyword keeps the current category page
       history.pushState(null, "", location.pathname + (qs ? "?" + qs : ""));
@@ -213,6 +229,8 @@
     }
 
     select.addEventListener("change", function () { go({ kw: select.value }); });
+    mselect.addEventListener("change", function () { go({ md: mselect.value }); });
+    inter.addEventListener("click", function () { go({ it: inter.getAttribute("aria-pressed") !== "true" }); });
     sortBtns.forEach(function (b) {
       b.addEventListener("click", function () { go({ sort: b.getAttribute("data-sort") }); });
     });
@@ -303,7 +321,7 @@
 
   window.addEventListener("popstate", function () {
     if (location.pathname === shownPath) {
-      if (index) index.render(); // only ?sort / ?kw changed
+      if (index) index.render(); // only the filters in the query changed
       return;
     }
     load(new URL(location.href), false);

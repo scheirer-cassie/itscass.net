@@ -1,20 +1,21 @@
 ---
 title: Immersive Art Protection Plan
 categories:
-  - artwork
+  - studio
 start: 2022
-end: "2024"
-summary: A body of art-based research into how immersive art could be
-  psychologically weaponized, and how to prevent it.
-keywords:
-  - virtual reality
-  - immersive art
-  - futurism
-  - fascism
-  - dark patterns
-research_question: What would it look like for immersive art to be
-  psychologically weaponized? How do we prevent this from happening?
-tint: "#9b8cf2"
+end: '2024'
+summary: A body of art-based research into how immersive art could be psychologically weaponized, and how to prevent it.
+themes:
+  - chance & control
+  - perception & representation
+  - science & technology
+  - justice & activism
+medium:
+  - object
+  - environment
+interactive: true
+research_question: What would it look like for immersive art to be psychologically weaponized? How do we prevent this from happening?
+tint: '#9b8cf2'
 ---
 The Immersive Art Protection Plan is an interdisciplinary investigation into the psychopolitical history and future of immersive art. Projecting the immersive tactics of the Italian Futurist art movement into our present technological paradigm, I posit how improper creative uses of today’s immersive technology could spark a Neo-Futurist movement in which mass psychological manipulation is again disguised as an innovative art form. Based on this hypothesized dystopia, I explore creative and scientific approaches to identify and avoid its actuality.
 
@@ -39,8 +40,8 @@ With my goal as an artist being to educate and to heal, I am curious about the i
 
 In this body of work I explore how supplementing static visual media with a poetic “script” can create immersion by engineering the art-viewing experience into a hybrid game-performance. As the viewer reads the script, which details a scene related to the artwork, they (hopefully) decipher instructions within the text about how to interact with and interpret the artwork, as well as how to interpret their own role as the actor in the performance of interaction. The artwork is like a set that has been designed for the viewer, and hence the viewer becomes key to the success of the artwork.
 
-- [“Performance of Little Windows”](/projects/artwork/performance-of-little-windows/) (2023). Interactive sculpture.
-- [“Honey / blob”](/projects/artwork/honey-blob/) (2022). Interactive soft-sculpture and video.
+- [“Performance of Little Windows”](/projects/studio/performance-of-little-windows/) (2023). Interactive sculpture.
+- [“Honey / blob”](/projects/studio/honey-blob/) (2022). Interactive soft-sculpture and video.
 
 ### Science · Immersive Art and Cognition
 

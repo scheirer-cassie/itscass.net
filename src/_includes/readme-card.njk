@@ -1,5 +1,5 @@
 {%- from "macros.njk" import pic -%}
-<article class="readme" data-start="{{ p.data.start }}"{% if p.data | isOngoing %} data-ongoing{% endif %} data-title="{{ p.data.title | lower }}" data-kw="{% for k in p.data.keywords %}|{{ k | kwslug }}{% endfor %}|">
+<article class="readme" data-start="{{ p.data.start }}"{% if p.data | isOngoing %} data-ongoing{% endif %} data-title="{{ p.data.title | lower }}" data-theme="{% for k in p.data.themes | aslist %}|{{ k | mediaslug }}{% endfor %}|"{% if p.data.interactive %} data-interactive{% endif %} data-medium="{% for m in p.data.medium | aslist %}|{{ m | mediaslug }}{% endfor %}|">
 <header class="chead">
 <h2 class="ctitle"><a href="{{ p.url }}">{{ p.data.title }}</a></h2>
 <p class="cyears">{{ p.data | years }}</p>

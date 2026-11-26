@@ -7,9 +7,10 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 const site = JSON.parse(fs.readFileSync("./_data/site.json", "utf8"));
 
 // ---- helpers -------------------------------------------------------------
-// path slugs: lowercase, spaces → _      keyword slugs: lowercase, spaces → -
+// theme slugs: lowercase, spaces → -
 const slugify = (s) => String(s ?? "").toLowerCase().trim().replace(/\s+/g, "_");
 const kwSlug = (s) => String(s ?? "").toLowerCase().trim().replace(/\s+/g, "-");
+const mediaSlug = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const asList = (v) => (v == null || v === "" ? [] : Array.isArray(v) ? v : [v]);
 
 const catIndex = (item) => {
@@ -63,20 +64,32 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("updates", (api) =>
     api.getFilteredByGlob("content/updates/*.md").sort(byDateDesc)
   );
-  eleventyConfig.addCollection("keywords", (api) => {
+  eleventyConfig.addCollection("themes", (api) => {
     const seen = new Map();
     for (const p of projects(api)) {
-      for (const k of asList(p.data.keywords)) seen.set(kwSlug(k), k);
+      for (const k of asList(p.data.themes)) seen.set(mediaSlug(k), k);
     }
+    const order = site.themes || [];
+    const rank = (n) => { const i = order.indexOf(n); return i === -1 ? order.length : i; };
     return [...seen.entries()]
       .map(([slug, name]) => ({ slug, name }))
-      .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
+      .sort((a, b) => rank(a.name) - rank(b.name) || a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
+  });
+  // medium tags in use, in the order the CMS dropdown lists them
+  eleventyConfig.addCollection("media", (api) => {
+    const order = (site.media || []);
+    const used = new Map();
+    for (const p of projects(api)) for (const m of asList(p.data.medium)) used.set(mediaSlug(m), m);
+    const rank = (n) => { const i = order.indexOf(n); return i === -1 ? order.length : i; };
+    return [...used.entries()].map(([slug, name]) => ({ slug, name }))
+      .sort((a, b) => rank(a.name) - rank(b.name) || a.name.localeCompare(b.name));
   });
   eleventyConfig.addCollection("about", (api) => api.getFilteredByGlob("content/about.md"));
 
   // ---- filters -----------------------------------------------------------
   eleventyConfig.addFilter("slug", slugify);
   eleventyConfig.addFilter("kwslug", kwSlug);
+  eleventyConfig.addFilter("mediaslug", mediaSlug);
   eleventyConfig.addFilter("aslist", asList);
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString().slice(0, 10));
 

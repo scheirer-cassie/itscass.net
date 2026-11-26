@@ -9,19 +9,35 @@
   "cv": "/cv.pdf",
   "portrait": "/src/images/portrait.jpg",
   "portrait_alt": "Portrait of Cass Scheirer",
-  "description": "Cass Scheirer — PhD candidate at NYU Steinhardt, artist and educator. Research, teaching, artwork, photography, design and collections.",
+  "description": "Cass Scheirer — PhD candidate at NYU Steinhardt, artist and educator. Research, design, studio work, collections and teaching.",
   "url": "https://cassmakes.com",
   "categories": [
     "research",
     "design",
-    "artwork",
-    "photography",
-    "writing",
+    "studio",
     "collections",
     "teaching"
   ],
   "nav_years": [
     "design",
-    "artwork"
+    "studio"
+  ],
+  "media": [
+    "image",
+    "object",
+    "environment",
+    "text"
+  ],
+  "themes": [
+    "queerness",
+    "childhood & family",
+    "chance & control",
+    "intra/interpersonal psychology",
+    "perception & representation",
+    "science & technology",
+    "learning & teaching",
+    "creative expression",
+    "ritual & collecting",
+    "justice & activism"
   ]
 }

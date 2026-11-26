@@ -1,14 +1,19 @@
 ---
-title: "The Unit Test"
-categories: [artwork]
+title: The Unit Test
+categories:
+  - studio
 start: 2021
 end: 2021
-keywords: ["physical computing", "computer science education", "gender", "game design"]
-summary: "An arcade-style game that teaches binary and logic operations while exploring gender."
-medium: "Game. Acrylic, Arduino components, wire, fabric; 1’ x 5” x 4”."
-context: "Gadgets, Sensors, and Activity Recognition, Fall 2021"
-tint: "#9fb8a0"
-# imported from https://www.itscass.net/unit
+summary: An arcade-style game that teaches binary and logic operations while exploring gender.
+themes:
+  - queerness
+  - learning & teaching
+medium:
+  - object
+interactive: true
+materials: Game. Acrylic, Arduino components, wire, fabric; 1’ x 5” x 4”.
+context: Gadgets, Sensors, and Activity Recognition, Fall 2021
+tint: '#9fb8a0'
 ---
 For the final project of this physical computing class, I made an arcade-esque computer science learning game that also represents my exploration with gender. The goal is to introduce the player to binary and logical operations. The object is a black acrylic box with the word “it” embossed on the front; a row of 8 LEDs, two of which are flashing green; a piece of black fabric curtaining an open window in the box; and two red buttons hanging down on wire, the left of which has the number 0 written on it, and the right 1. Next to the box is an instruction sheet, which has a table outlining text to binary conversions and the function of various logical operators. At the bottom of the sheet, it reads: “PASSCODE: ¬(me)”.
 

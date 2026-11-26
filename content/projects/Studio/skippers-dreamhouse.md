@@ -1,15 +1,19 @@
 ---
-title: "Skipper’s Dreamhouse"
-categories: [artwork]
+title: Skipper’s Dreamhouse
+categories:
+  - studio
 start: 2018
 end: 2018
-keywords: ["interactive sculpture", "physical computing", "childhood"]
-summary: "A Halloween-inspired Barbie Dreamhouse automaton, built by Barbie’s little sister Skipper."
-medium: "Interactive sculpture. Barbie doll, yarn, newspaper, film prints, acrylic paint, Arduino; 1’ x 1’ x 1.5’."
-context: "Interactivity and Computation, Fall 2018"
-collaborators: "Olivia Cunnally"
-tint: "#e9a3b8"
-# imported from https://www.itscass.net/skippers-dreamhouse
+summary: A Halloween-inspired Barbie Dreamhouse automaton, built by Barbie’s little sister Skipper.
+themes:
+  - childhood & family
+medium:
+  - object
+interactive: true
+materials: Interactive sculpture. Barbie doll, yarn, newspaper, film prints, acrylic paint, Arduino; 1’ x 1’ x 1.5’.
+context: Interactivity and Computation, Fall 2018
+collaborators: Olivia Cunnally
+tint: '#e9a3b8'
 ---
 This project was an experimental one, as my professor (Golan Levin) had never assigned a project using Arduino before. There weren’t many limits to what we could create. The only guideline was to make a physical, interactive “automaton,” which in the process must teach us how to use sensors and moving pieces in our artwork—and may contain a creepy element, if desired, as the due date was right after Halloween.
 

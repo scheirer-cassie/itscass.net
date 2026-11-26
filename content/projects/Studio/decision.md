@@ -1,15 +1,22 @@
 ---
-title: "Decision"
-categories: [artwork]
+title: Decision
+categories:
+  - studio
 start: 2021
 end: 2021
-keywords: ["game design", "chance", "mindfulness", "artist writing"]
-summary: "A game, poem and exercise built from a 60-page manual, an acrylic die stencil and a roll of tape — asking whether embracing chance can create mindfulness."
-research_question: "Can embracing chance create mindfulness?"
-medium: "Game. Ink on paper, acrylic, tape, binder clips; 8.5” x 11” x 60 pages."
-context: "Artist Writing, Fall 2021"
-tint: "#e8e2c8"
-# imported from https://www.itscass.net/decision
+summary: A game, poem and exercise built from a 60-page manual, an acrylic die stencil and a roll of tape — asking whether embracing chance can create mindfulness.
+themes:
+  - chance & control
+  - intra/interpersonal psychology
+  - ritual & collecting
+medium:
+  - object
+  - text
+interactive: true
+materials: Game. Ink on paper, acrylic, tape, binder clips; 8.5” x 11” x 60 pages.
+research_question: Can embracing chance create mindfulness?
+context: Artist Writing, Fall 2021
+tint: '#e8e2c8'
 ---
 ### Artist Statement
 

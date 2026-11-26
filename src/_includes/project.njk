@@ -6,8 +6,12 @@ layout: doc.njk
 <h1 class="dtitle">{{ title }}</h1>
 <dl class="rdl">
 <dt>YEARS</dt><dd>{{ { years: years, start: start, end: end } | years }}</dd>
-{%- if medium %}
-<dt>MEDIUM</dt><dd>{{ medium }}</dd>
+{%- set mediaList = medium | aslist %}
+{%- if mediaList.length or interactive %}
+<dt>MEDIUM</dt><dd class="ptags">{% for m in mediaList %}<a href="/projects/?medium={{ m | mediaslug }}" data-idx>{{ m }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% if interactive %} · <a href="/projects/?interactive=1" data-idx>interactive</a>{% endif %}</dd>
+{%- endif %}
+{%- if materials %}
+<dt>MATERIALS</dt><dd>{{ materials }}</dd>
 {%- endif %}
 {%- if context %}
 <dt>MADE FOR</dt><dd>{{ context }}</dd>
@@ -16,8 +20,9 @@ layout: doc.njk
 <dt>WITH</dt><dd>{{ collaborators }}</dd>
 {%- endif %}
 <dt>TYPE</dt><dd>{% for c in categories %}<a href="/projects/{{ c }}/" data-idx>{{ c }}</a>{% if not loop.last %} / {% endif %}{% endfor %}</dd>
-{%- if keywords and keywords.length %}
-<dt>KEYWORDS</dt><dd class="ptags">{% for k in keywords %}<a href="/projects/?kw={{ k | kwslug }}" data-idx>{{ k }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+{%- set themeList = themes | aslist %}
+{%- if themeList.length %}
+<dt>THEMES</dt><dd class="ptags">{% for k in themeList %}<a href="/projects/?theme={{ k | mediaslug }}" data-idx>{{ k }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd>
 {%- endif %}
 </dl>
 {{ pic(hero, page.inputPath, hero_alt or title, "hero", tint, "(min-width: 1200px) 840px, 100vw", "hero image") }}

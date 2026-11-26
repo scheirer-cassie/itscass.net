@@ -1,14 +1,19 @@
 ---
-title: "Wait!"
-categories: [artwork]
+title: Wait!
+categories:
+  - studio
 start: 2019
 end: 2019
-keywords: ["interactive sculpture", "balance", "wire sculpture"]
-summary: "A balancing steel sculpture, inspired by Calder, that expresses instability with a single wire line."
-medium: "Interactive sculpture. Stainless steel, spray paint; 6.5’ x 3’ x 3’."
-context: "Systems and Processes, Fall 2019"
-tint: "#b5c7d3"
-# imported from https://www.itscass.net/wait-1
+summary: A balancing steel sculpture, inspired by Calder, that expresses instability with a single wire line.
+themes:
+  - chance & control
+  - intra/interpersonal psychology
+medium:
+  - object
+interactive: true
+materials: Interactive sculpture. Stainless steel, spray paint; 6.5’ x 3’ x 3’.
+context: Systems and Processes, Fall 2019
+tint: '#b5c7d3'
 ---
 For our second project we had to “disrupt the stability” of a system, so I chose to approach it literally and make a piece having to do with balance. In my initial brainstorming I was inspired by Alexander Calder, whose sculptures are very dependent on physics and incorporate 3D space in an unconventional way, so I wanted to make something with a similar goal.
 

@@ -1,19 +1,29 @@
 {#- Shared body of /projects/ and /projects/<category>/. Every matching card is in the HTML;
-    site.js reorders/hides them from ?sort= and ?kw=. Controls only show when JS runs. -#}
+    site.js reorders/hides them from ?sort=, ?medium=, ?theme= and ?interactive=. Controls only show when JS runs. -#}
 <div class="controls js-only">
 <div class="sorts" role="group" aria-label="Sort projects">
 <span class="lbl">sort:</span>
 <button type="button" class="sortb" data-sort="new" aria-pressed="true">newest</button><span class="sep" aria-hidden="true"> | </span><button type="button" class="sortb" data-sort="old" aria-pressed="false">oldest</button><span class="sep" aria-hidden="true"> | </span><button type="button" class="sortb" data-sort="az" aria-pressed="false">a-z</button>
 </div>
 <div class="kwsel">
-<label for="kw">keyword:</label>
+<label for="md">medium:</label>
+<select id="md">
+<option value="">all</option>
+{%- for m in collections.media %}
+<option value="{{ m.slug }}">{{ m.name }}</option>
+{%- endfor %}
+</select>
+</div>
+<div class="kwsel">
+<label for="kw">theme:</label>
 <select id="kw">
 <option value="">all</option>
-{%- for k in collections.keywords %}
+{%- for k in collections.themes %}
 <option value="{{ k.slug }}">{{ k.name }}</option>
 {%- endfor %}
 </select>
 </div>
+<button type="button" class="sortb itoggle" id="inter" aria-pressed="false">interactive</button>
 </div>
 <p class="status sr" id="status" role="status" aria-live="polite"></p>
 <div class="mason" id="cards">
@@ -21,4 +31,4 @@
 {% include "readme-card.njk" %}
 {%- endfor %}
 </div>
-<p class="empty" id="empty"{% if list.length %} hidden{% endif %}>no files match. try another keyword.</p>
+<p class="empty" id="empty"{% if list.length %} hidden{% endif %}>no projects match. try another medium or theme.</p>

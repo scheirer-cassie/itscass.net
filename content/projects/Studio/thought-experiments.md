@@ -1,14 +1,15 @@
 ---
 title: Thought Experiments
 categories:
-  - artwork
+  - studio
 start: 2026
 summary: A body of artwork on humanity's uneasy relationship with AI.
-keywords:
-  - AI
-  - conceptual art
-  - installation
-  - uncertainty
-tint: "#c9c3b6"
+themes:
+  - chance & control
+  - science & technology
+medium:
+  - environment
+interactive: false
+tint: '#c9c3b6'
 ---
 [Write a real summary: a conceptual art exhibition on humanity’s uneasy relationship with AI.]

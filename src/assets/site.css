@@ -242,3 +242,7 @@ h1, h2, h3, .name, .path, .hello, .dtitle, .sect, .ptitle, .feedh h2 { font-fami
   :root { --fs-path: 26px; }
   .doc .rdl { grid-template-columns: 80px minmax(0, 1fr); }
 }
+
+/* interactive filter: a [ ] / [x] toggle */
+.itoggle::before { content: "[ ] "; white-space: pre; }
+.itoggle[aria-pressed="true"]::before { content: "[x] "; }

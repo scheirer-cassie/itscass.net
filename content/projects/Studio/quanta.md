@@ -1,14 +1,19 @@
 ---
-title: "QUANTA"
-categories: [artwork]
+title: QUANTA
+categories:
+  - studio
 start: 2021
 end: 2021
-keywords: ["virtual reality", "installation", "spirituality", "color"]
-summary: "A VR installation asking how science and spirituality can coexist."
-medium: "Virtual reality installation. 3:23."
-context: "Color Theory, Spring 2021"
-tint: "#8fb3e0"
-# imported from https://www.itscass.net/quanta
+summary: A VR installation asking how science and spirituality can coexist.
+themes:
+  - chance & control
+  - science & technology
+medium:
+  - environment
+interactive: false
+materials: Virtual reality installation. 3:23.
+context: Color Theory, Spring 2021
+tint: '#8fb3e0'
 ---
 ### Artist Statement
 

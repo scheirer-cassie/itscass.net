@@ -1,11 +1,11 @@
 [
   {
     "from": "/projects/artwork/art_of_science/",
-    "to": "/projects/artwork/art-of-science/"
+    "to": "/projects/studio/art-of-science/"
   },
   {
     "from": "/projects/artwork/god_is_a_woman/",
-    "to": "/projects/artwork/god-is-a-woman/"
+    "to": "/projects/studio/god-is-a-woman/"
   },
   {
     "from": "/projects/teaching/hidden_flickers/",
@@ -13,15 +13,15 @@
   },
   {
     "from": "/projects/artwork/honey_blob/",
-    "to": "/projects/artwork/honey-blob/"
+    "to": "/projects/studio/honey-blob/"
   },
   {
     "from": "/projects/artwork/i_woke_up/",
-    "to": "/projects/artwork/i-woke-up/"
+    "to": "/projects/studio/i-woke-up/"
   },
   {
     "from": "/projects/research/immersive_art_protection_plan/",
-    "to": "/projects/artwork/immersive-art-protection-plan/"
+    "to": "/projects/studio/immersive-art-protection-plan/"
   },
   {
     "from": "/projects/teaching/intro_to_programming/",
@@ -29,43 +29,43 @@
   },
   {
     "from": "/projects/photography/miss_mary_mack/",
-    "to": "/projects/photography/miss-mary-mack/"
+    "to": "/projects/studio/miss-mary-mack/"
   },
   {
     "from": "/projects/artwork/performance_of_little_windows/",
-    "to": "/projects/artwork/performance-of-little-windows/"
+    "to": "/projects/studio/performance-of-little-windows/"
   },
   {
     "from": "/projects/photography/photography_portfolio/",
-    "to": "/projects/photography/photography-portfolio/"
+    "to": "/projects/studio/photography-portfolio/"
   },
   {
     "from": "/projects/artwork/skippers_dreamhouse/",
-    "to": "/projects/artwork/skippers-dreamhouse/"
+    "to": "/projects/studio/skippers-dreamhouse/"
   },
   {
     "from": "/projects/artwork/ten_dollar_story/",
-    "to": "/projects/artwork/ten-dollar-story/"
+    "to": "/projects/studio/ten-dollar-story/"
   },
   {
     "from": "/projects/artwork/the_andy_channel/",
-    "to": "/projects/artwork/the-andy-channel/"
+    "to": "/projects/studio/the-andy-channel/"
   },
   {
     "from": "/projects/photography/the_julie_project/",
-    "to": "/projects/photography/o-to-weep-in-a-creperie-sans-masque/"
+    "to": "/projects/studio/o-to-weep-in-a-creperie-sans-masque/"
   },
   {
     "from": "/projects/artwork/the_principles_and_applications_of_electricity/",
-    "to": "/projects/artwork/the-principles-and-applications-of-electricity/"
+    "to": "/projects/studio/the-principles-and-applications-of-electricity/"
   },
   {
     "from": "/projects/artwork/the_unit_test/",
-    "to": "/projects/artwork/the-unit-test/"
+    "to": "/projects/studio/the-unit-test/"
   },
   {
     "from": "/projects/artwork/thought_experiments/",
-    "to": "/projects/artwork/thought-experiments/"
+    "to": "/projects/studio/thought-experiments/"
   },
   {
     "from": "/projects/research/vulnerability-in-social-justice-arts-learning/",
@@ -73,7 +73,7 @@
   },
   {
     "from": "/projects/photography/worldline_machine/",
-    "to": "/projects/photography/worldline-machine/"
+    "to": "/projects/studio/worldline-machine/"
   },
   {
     "from": "/updates/2026-09-12_notes/",
@@ -97,6 +97,102 @@
   },
   {
     "from": "/projects/research/immersive-art-protection-plan/",
-    "to": "/projects/artwork/immersive-art-protection-plan/"
+    "to": "/projects/studio/immersive-art-protection-plan/"
+  },
+  {
+    "from": "/projects/artwork/art-of-science/",
+    "to": "/projects/studio/art-of-science/"
+  },
+  {
+    "from": "/projects/artwork/decision/",
+    "to": "/projects/studio/decision/"
+  },
+  {
+    "from": "/projects/artwork/god-is-a-woman/",
+    "to": "/projects/studio/god-is-a-woman/"
+  },
+  {
+    "from": "/projects/artwork/honey-blob/",
+    "to": "/projects/studio/honey-blob/"
+  },
+  {
+    "from": "/projects/artwork/i-woke-up/",
+    "to": "/projects/studio/i-woke-up/"
+  },
+  {
+    "from": "/projects/artwork/immersive-art-protection-plan/",
+    "to": "/projects/studio/immersive-art-protection-plan/"
+  },
+  {
+    "from": "/projects/artwork/performance-of-little-windows/",
+    "to": "/projects/studio/performance-of-little-windows/"
+  },
+  {
+    "from": "/projects/artwork/quanta/",
+    "to": "/projects/studio/quanta/"
+  },
+  {
+    "from": "/projects/artwork/skippers-dreamhouse/",
+    "to": "/projects/studio/skippers-dreamhouse/"
+  },
+  {
+    "from": "/projects/artwork/ten-dollar-story/",
+    "to": "/projects/studio/ten-dollar-story/"
+  },
+  {
+    "from": "/projects/artwork/the-andy-channel/",
+    "to": "/projects/studio/the-andy-channel/"
+  },
+  {
+    "from": "/projects/artwork/the-principles-and-applications-of-electricity/",
+    "to": "/projects/studio/the-principles-and-applications-of-electricity/"
+  },
+  {
+    "from": "/projects/artwork/the-unit-test/",
+    "to": "/projects/studio/the-unit-test/"
+  },
+  {
+    "from": "/projects/artwork/thought-experiments/",
+    "to": "/projects/studio/thought-experiments/"
+  },
+  {
+    "from": "/projects/artwork/wait/",
+    "to": "/projects/studio/wait/"
+  },
+  {
+    "from": "/projects/photography/andy/",
+    "to": "/projects/studio/andy/"
+  },
+  {
+    "from": "/projects/photography/helix/",
+    "to": "/projects/studio/helix/"
+  },
+  {
+    "from": "/projects/photography/miss-mary-mack/",
+    "to": "/projects/studio/miss-mary-mack/"
+  },
+  {
+    "from": "/projects/photography/o-to-weep-in-a-creperie-sans-masque/",
+    "to": "/projects/studio/o-to-weep-in-a-creperie-sans-masque/"
+  },
+  {
+    "from": "/projects/photography/photography-portfolio/",
+    "to": "/projects/studio/photography-portfolio/"
+  },
+  {
+    "from": "/projects/photography/worldline-machine/",
+    "to": "/projects/studio/worldline-machine/"
+  },
+  {
+    "from": "/projects/artwork/",
+    "to": "/projects/studio/"
+  },
+  {
+    "from": "/projects/photography/",
+    "to": "/projects/studio/"
+  },
+  {
+    "from": "/projects/writing/",
+    "to": "/projects/studio/"
   }
 ]

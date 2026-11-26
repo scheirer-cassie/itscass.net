@@ -1,14 +1,22 @@
 ---
-title: "O, to weep in a creperie sans masque!"
-categories: [photography]
+title: O, to weep in a creperie sans masque!
+categories:
+  - studio
 start: 2020
 end: 2021
-keywords: ["photography", "portraiture", "costume design"]
-summary: "“The Julie Project”: a photo series documenting Julie Scharf’s daily character-driven outfits."
-medium: "Digital photo series."
-collaborators: "Julie Scharf"
-tint: "#c2a0c8"
-# imported from https://www.itscass.net/the-julie-project
+summary: '“The Julie Project”: a photo series documenting Julie Scharf’s daily character-driven outfits.'
+themes:
+  - queerness
+  - intra/interpersonal psychology
+  - perception & representation
+  - creative expression
+  - ritual & collecting
+medium:
+  - image
+interactive: false
+materials: Digital photo series.
+collaborators: Julie Scharf
+tint: '#c2a0c8'
 ---
 Julie Scharf is my roommate and one of my best friends. She is a costume designer, and has the most impressive wardrobe as well as one of the most fascinating, vibrant minds of anyone I know. She is unapologetically herself — her identity is her trademark.
 

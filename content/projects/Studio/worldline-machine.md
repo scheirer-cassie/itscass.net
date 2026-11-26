@@ -1,10 +1,16 @@
 ---
 title: Worldline Machine
-categories: [photography, artwork]
+categories:
+  - studio
 start: 2026
 years: ongoing
-keywords: [slit-scan, camera building, physical computing, performance]
 summary: A custom slit-scan rig (rotating table, lights, camera) with capture and live performance modes.
-tint: "#e96aa0"
+themes:
+  - perception & representation
+medium:
+  - image
+  - object
+interactive: true
+tint: '#e96aa0'
 ---
 [Write a real summary: a custom slit-scan rig (rotating table, lights, camera) with capture and live performance modes.]
