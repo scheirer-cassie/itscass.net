@@ -8,7 +8,7 @@ end: "2021"
 summary: "Also known as “The Julie Project”: a photo series documenting Julie
   Scharf’s daily character-driven outfits."
 themes:
-  - queerness
+  - gender & queerness
   - creative expression
   - ritual & collecting
 medium:

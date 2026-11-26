@@ -7,7 +7,7 @@ start: 2021
 summary: An arcade-style game that teaches binary and logic operations while
   exploring gender.
 themes:
-  - queerness
+  - gender & queerness
   - learning & teaching
 medium:
   - object

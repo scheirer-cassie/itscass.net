@@ -71,7 +71,7 @@ content:
         options:
           multiple: true
           values:
-            - queerness
+            - gender & queerness
             - childhood & family
             - chance & control
             - intra/interpersonal psychology

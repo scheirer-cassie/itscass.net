@@ -7,7 +7,7 @@ start: 2021
 summary: A 15-foot handwritten scroll poem about how my art practice matured
   from coping with anxiety to exploring queer joy.
 themes:
-  - queerness
+  - gender & queerness
   - intra/interpersonal psychology
 medium:
   - environment

@@ -7,7 +7,7 @@ start: 2023
 summary: An interactive sculpture of little windows, developed through several
   prototyped iterations.
 themes:
-  - queerness
+  - gender & queerness
   - chance & control
 medium:
   - object

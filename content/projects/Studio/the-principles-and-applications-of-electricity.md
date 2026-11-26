@@ -6,7 +6,7 @@ start: 2019
 end: 2019
 summary: A found-footage video collage connecting old instructional films for women with elementary science lectures.
 themes:
-  - queerness
+  - gender & queerness
   - perception & representation
   - science & technology
   - justice & activism

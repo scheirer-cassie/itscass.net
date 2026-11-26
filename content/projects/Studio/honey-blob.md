@@ -6,7 +6,7 @@ categories:
 start: 2022
 summary: A soft, handmade interactive sculpture of fabric, yarn and magnets.
 themes:
-  - queerness
+  - gender & queerness
   - childhood & family
 medium:
   - object

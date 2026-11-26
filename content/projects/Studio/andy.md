@@ -7,7 +7,7 @@ start: 2021
 years: ongoing
 summary: Fashion editorials made in collaboration with costume designer Julie Scharf.
 themes:
-  - queerness
+  - gender & queerness
   - creative expression
 medium:
   - image

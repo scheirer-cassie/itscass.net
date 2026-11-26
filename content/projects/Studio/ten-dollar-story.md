@@ -6,7 +6,7 @@ categories:
 start: 2022
 summary: An illustrated poem in eleven pages of ink on paper.
 themes:
-  - queerness
+  - gender & queerness
   - intra/interpersonal psychology
 medium:
   - image
