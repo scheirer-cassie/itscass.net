@@ -1,9 +1,9 @@
 ---
 title: Immersive Art Protection Plan
 categories:
-  - research
+  - artwork
 start: 2022
-end: present
+end: "2024"
 summary: A body of art-based research into how immersive art could be
   psychologically weaponized, and how to prevent it.
 keywords:
