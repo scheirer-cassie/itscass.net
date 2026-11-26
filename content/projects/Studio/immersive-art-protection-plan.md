@@ -1,21 +1,24 @@
 ---
 title: Immersive Art Protection Plan
+listed: true
 categories:
   - studio
 start: 2022
-end: '2024'
-summary: A body of art-based research into how immersive art could be psychologically weaponized, and how to prevent it.
+end: "2024"
+summary: A body of art-based research into how immersive art could be
+  psychologically weaponized, and how to prevent it.
 themes:
   - chance & control
   - perception & representation
   - science & technology
   - justice & activism
+research_question: What would it look like for immersive art to be
+  psychologically weaponized? How do we prevent this from happening?
 medium:
-  - object
+  - image
   - environment
-interactive: true
-research_question: What would it look like for immersive art to be psychologically weaponized? How do we prevent this from happening?
-tint: '#9b8cf2'
+interactive: false
+tint: "#9b8cf2"
 ---
 The Immersive Art Protection Plan is an interdisciplinary investigation into the psychopolitical history and future of immersive art. Projecting the immersive tactics of the Italian Futurist art movement into our present technological paradigm, I posit how improper creative uses of today’s immersive technology could spark a Neo-Futurist movement in which mass psychological manipulation is again disguised as an innovative art form. Based on this hypothesized dystopia, I explore creative and scientific approaches to identify and avoid its actuality.
 
