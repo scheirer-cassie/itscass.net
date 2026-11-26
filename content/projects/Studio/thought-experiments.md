@@ -1,5 +1,6 @@
 ---
 title: Thought Experiments
+listed: false
 categories:
   - studio
 start: 2026
@@ -8,8 +9,8 @@ themes:
   - chance & control
   - science & technology
 medium:
-  - environment
+  - image
 interactive: false
-tint: '#c9c3b6'
+tint: "#c9c3b6"
 ---
 [Write a real summary: a conceptual art exhibition on humanity’s uneasy relationship with AI.]
