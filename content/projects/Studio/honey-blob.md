@@ -14,6 +14,7 @@ medium:
 interactive: true
 materials: Interactive sculpture. Fabric, thread, yarn, magnets, zipper,
   buttons, ink on paper; 10” x 6” x 4”.
+context: Objects of Play, Spring 2022
 tint: "#f0c987"
 ---
 An interactive soft-sculpture and video (3:11), part of [Narrative Objects](/projects/studio/immersive-art-protection-plan/), a body of art-based research into what makes static art immersive.
