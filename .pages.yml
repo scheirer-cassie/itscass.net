@@ -21,7 +21,7 @@ content:
     filename: "{primary}.md"
     exclude: [projects.11tydata.js]
     view:
-      fields: [title, categories, start, listed]
+      fields: [title, categories, start]
       primary: title
       sort: [start, title]
       search: [title, summary, keywords]
