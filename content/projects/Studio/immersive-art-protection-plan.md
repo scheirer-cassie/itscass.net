@@ -17,7 +17,9 @@ research_question: What would it look like for immersive art to be
 medium:
   - image
   - environment
-interactive: false
+  - object
+interactive: true
+context: Undergraduate thesis project
 tint: "#9b8cf2"
 ---
 The Immersive Art Protection Plan is an interdisciplinary investigation into the psychopolitical history and future of immersive art. Projecting the immersive tactics of the Italian Futurist art movement into our present technological paradigm, I posit how improper creative uses of today’s immersive technology could spark a Neo-Futurist movement in which mass psychological manipulation is again disguised as an innovative art form. Based on this hypothesized dystopia, I explore creative and scientific approaches to identify and avoid its actuality.
