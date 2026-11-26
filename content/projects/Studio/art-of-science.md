@@ -9,7 +9,6 @@ summary: A 15-foot handwritten scroll poem about how my art practice matured
 themes:
   - queerness
   - intra/interpersonal psychology
-  - creative expression
 medium:
   - environment
   - text
